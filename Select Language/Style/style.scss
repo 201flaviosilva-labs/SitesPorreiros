@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+* {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+    transition: 2s;
+    cursor: cell;
+}
+
+html,
+body,
+main {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    header {
+        position: fixed;
+        top: 0;
+        select {
+            float: right;
+            margin: 24px 20px 0 0;
+            width: 150px;
+            height: 30px;
+            border: 2px solid whitesmoke;
+            border-radius: 10px;
+            font-size: 18px;
+            background-color: royalblue;
+            cursor: crosshair;
+        }
+    }
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        * {
+            color: whitesmoke;
+            letter-spacing: 14px;
+            text-align: center;
+        }
+        div {
+            h1 {
+                font-size: 50px;
+                margin-bottom: 16px;
+            }
+            h2 {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+        }
+        p {
+            letter-spacing: normal;
+            word-spacing: normal;
+            font-size: 20px;
+        }
+    }
+    footer {
+        position: fixed;
+        height: 24px;
+        bottom: 4px;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: royalblue;
+            cursor: crosshair;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        & * {
+            letter-spacing: initial;
+        }
+        h1 {
+            font-size: 32px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    main {
+        h1 {
+            font-size: 16px;
+        }
+        h2 {
+            font-size: 14px;
+        }
+    }
+}
