@@ -1,7 +1,7 @@
 # SitesPorreiros
  SitesPorreiros
 
-## JSCity
+## Semáforo
 
 Apena suma animação de um Semáforo em JavaScript
 
