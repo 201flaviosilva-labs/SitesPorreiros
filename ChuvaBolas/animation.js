@@ -13,10 +13,9 @@ body.addEventListener(
     () => {
         const corMudar = funcMudarCor();
         const rangeBola = Math.floor(Math.random() * window.innerWidth - 50);
-        const bolinha = document.createElement("div");
         const tamanho = Math.floor(Math.random() * 50 + 1) + "px";
+        const bolinha = document.createElement("div");
         bolinha.classList.add("bolas");
-        bolinha.style.top = "0px";
         bolinha.style.left = rangeBola + "px";
         bolinha.style.width = tamanho;
         bolinha.style.height = tamanho;
@@ -30,6 +29,7 @@ body.addEventListener(
         function frame() {
             if (pos == window.innerHeight) {
                 clearInterval(id);
+                bolinha.remove();
             } else {
                 pos++;
                 bolinha.style.top = pos + "px";

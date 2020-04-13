@@ -1,21 +1,27 @@
+const h1Text = document.getElementById("h1Text");
 const imagenImg = document.getElementById("imagenImg");
+const btnOn = document.getElementById("btn");
 
-const main = document.getElementById("main");
+let flag = false;
+// true === ligado
+// flase === desligado
 
-const btnOn = document.getElementById("btnOn");
-const btnOff = document.getElementById("btnOff");
-
-
-btnOn.addEventListener(
+btn.addEventListener(
     "click",
     () => {
-        imagenImg.src = "./Lampada/lighton.gif";
-        main.style.backgroundColor = "white";
-    });
-
-btnOff.addEventListener(
-    "click",
-    () => {
-        imagenImg.src = "./Lampada/lightoff.gif";
-        main.style.backgroundColor = "black";
+        if (flag) { // Ligado
+            main.style.backgroundColor = "black";
+            h1Text.innerHTML = "Ilumina-me!";
+            h1Text.style.color = "white";
+            imagenImg.src = "./Lampada/lightoff.gif";
+            btnOn.innerHTML = "Ligar";
+            flag = false;
+        } else { // Desligado
+            main.style.backgroundColor = "white";
+            h1Text.innerHTML = "Escurece-me";
+            h1Text.style.color = "black";
+            imagenImg.src = "./Lampada/lighton.gif";
+            btnOn.innerHTML = "Desligar";
+            flag = true;
+        }
     });
