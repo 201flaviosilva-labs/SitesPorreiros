@@ -1,5 +1,6 @@
 import { ind } from "./indiomas.js";
 
+
 const DiaSemanaH2 = document.getElementById("DiaSemanaH2");
 const TextP = document.getElementById("TextP");
 const IndiomaSlect = document.getElementById("IndiomaSlect");
@@ -10,7 +11,8 @@ let indioma = ind.Portugues;
 main();
 
 function main() {
-    console.log(ind);
+    // console.log(ind);
+    console.log("Mensagem - IV. O MOSTRENGO -=> Fernando Pessoa");
     const valorIndiomaSlect = Object.keys(ind);
     for (let i = 0; i < valorIndiomaSlect.length; i++) {
         var opt = valorIndiomaSlect[i];

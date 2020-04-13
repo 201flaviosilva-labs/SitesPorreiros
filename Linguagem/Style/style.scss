@@ -38,22 +38,21 @@ body {
         flex-direction: column;
         * {
             color: whitesmoke;
-            letter-spacing: 14px;
             text-align: center;
         }
         div {
             h1 {
                 font-size: 50px;
                 margin-bottom: 16px;
+                letter-spacing: 14px;
             }
             h2 {
                 font-size: 32px;
                 margin-bottom: 40px;
+                letter-spacing: 14px;
             }
         }
         p {
-            letter-spacing: normal;
-            word-spacing: normal;
             font-size: 20px;
         }
     }

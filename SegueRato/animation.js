@@ -1,6 +1,5 @@
 const bolinha = document.getElementById("bolinha");
 
-
 function funcMudarCor() {
     const corMudar = [];
     for (let i = 0; i < 3; i++) {
@@ -14,23 +13,15 @@ setInterval(() => {
     bolinha.style.backgroundColor = "rgb(" + corMudar[0] + "," + corMudar[1] + "," + corMudar[2] + ")";
 }, 500);
 
+setInterval(() => { bolinha.style.width = bolinha.style.height = Math.floor((Math.random() * 25) + 1) + "px" }, 1500)
 
 body.onmousemove = findScreenCoords;
 
-function findScreenCoords(mouseEvent) {
-    var xpos;
-    var ypos;
-    if (mouseEvent) {
-        //FireFox
-        xpos = mouseEvent.screenX;
-        ypos = mouseEvent.screenY;
-    } else {
-        //IE
-        xpos = window.event.screenX;
-        ypos = window.event.screenY;
-    }
+function findScreenCoords() {
+    let xpos = event.clientX;
+    let ypos = event.clientY;
     console.log("X: " + xpos + ", Y: " + ypos);
 
-    bolinha.style.top = ypos - 100 + "px";
+    bolinha.style.top = ypos + "px";
     bolinha.style.left = xpos + "px";
 }

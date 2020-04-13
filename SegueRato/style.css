@@ -12,16 +12,17 @@ main {
 
 body {
     background-color: black;
+    cursor: crosshair;
 }
 
 #bolinha {
-    width: 10px;
-    height: 10px;
-    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
     border-radius: 50%;
     position: fixed;
     bottom: 0;
     right: 0;
     background-color: rgb(243, 3, 3);
-    transition: top 2s, left 2s, background 0.5s ease-in-out;
+    transition: top 2s, left 2s, background 0.5s ease-in-out, 1.5s width, 1.5s height;
 }
