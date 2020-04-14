@@ -1,0 +1,24 @@
+* {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Consolas", "monaco", monospace;
+    cursor: cell;
+}
+
+html,
+body,
+main {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+}
+
+.bolas {
+    position: fixed;
+    top: 0;
+    border: 1px solid black;
+    border-radius: 50%;
+}

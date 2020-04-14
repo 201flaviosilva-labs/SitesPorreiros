@@ -15,13 +15,12 @@ btn.addEventListener(
             h1Text.style.color = "white";
             imagenImg.src = "./Lampada/lightoff.gif";
             btnOn.innerHTML = "Ligar";
-            flag = false;
         } else { // Desligado
             main.style.backgroundColor = "white";
             h1Text.innerHTML = "Escurece-me";
             h1Text.style.color = "black";
             imagenImg.src = "./Lampada/lighton.gif";
             btnOn.innerHTML = "Desligar";
-            flag = true;
         }
+        flag = !flag;
     });
