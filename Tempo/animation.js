@@ -1,8 +1,6 @@
-const body = document.getElementById("body");
+const BodyId = document.getElementById("BodyId");
 const TempoH1 = document.getElementById("TempoH1");
 const DiaDaSemana = document.getElementById("DiaDaSemana");
-const pFooter = document.getElementById("pFooter");
-const IndiomaSlect = document.getElementById("IndiomaSlect");
 
 let semanaDia;
 let corBody = true;
@@ -11,14 +9,12 @@ setInterval(() => mudaDeCorFundo(), 2000);
 
 function mudaDeCorFundo() {
     const corMudar = funcMudarCor();
-
     if (corBody) {
-        body.style.backgroundColor = "rgb(" + corMudar[0] + "," + corMudar[1] + "," + corMudar[2] + ")";
+        BodyId.style.backgroundColor = "rgb(" + corMudar[0] + "," + corMudar[1] + "," + corMudar[2] + ")";
         corBody = false;
     } else {
         TempoH1.style.color = "rgb(" + corMudar[0] + "," + corMudar[1] + "," + corMudar[2] + ")";
         DiaDaSemana.style.color = "rgb(" + corMudar[0] + "," + corMudar[1] + "," + corMudar[2] + ")";
-        pFooter.style.color = "rgb(" + corMudar[0] + "," + corMudar[1] + "," + corMudar[2] + ")";
         corBody = true;
     }
 }
