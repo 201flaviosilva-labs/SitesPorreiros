@@ -11,11 +11,10 @@ let indioma = ind.Portugues;
 main();
 
 function main() {
-    // console.log(ind);
     console.log("Mensagem - IV. O MOSTRENGO -=> Fernando Pessoa");
     const valorIndiomaSlect = Object.keys(ind);
     for (let i = 0; i < valorIndiomaSlect.length; i++) {
-        var opt = valorIndiomaSlect[i];
+        let opt = valorIndiomaSlect[i];
         const el = document.createElement("option");
         el.textContent = opt;
         el.value = opt;
