@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            transition: 1s;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        body {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        div {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+    <script>
+        const div = document.querySelector("div");
+        const body = document.querySelector("body");
+
+        body.addEventListener("click", () => body.style.background = "white");
+        body.addEventListener("mouseenter", () => body.style.background = "gray");
+        body.addEventListener("mouseout", () => body.style.background = "black");
+
+        div.addEventListener("mousemove", () => div.style.background = "blue");
+        div.addEventListener("mousedown", () => div.style.background = "green");
+        div.addEventListener("mouseup", () => div.style.background = "red");
+    </script>
+</body>
+
+</html>
