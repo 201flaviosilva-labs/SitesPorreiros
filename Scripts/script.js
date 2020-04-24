@@ -1,3 +1,11 @@
 import { links } from "./links.js";
 
-console.log(links);
+const ClickLink = document.getElementById("ClickLink");
+
+const numRandom = Math.floor(Math.random() * links.length);
+ClickLink.href = links[numRandom];
+
+Click.addEventListener("click", () => {
+    const numRandom = Math.floor(Math.random() * links.length);
+    ClickLink.href = links[numRandom];
+})

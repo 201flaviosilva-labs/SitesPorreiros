@@ -4,6 +4,7 @@ export const links = [
     "./Pages/BatataMan/index.html",
     "./Pages/Bolhas/index.html",
     "./Pages/BoxStyle/index.html",
+    "./Pages/BTNs/index.html",
     "./Pages/Calculadora/index.html",
     "./Pages/ChuvaBolas/index.html",
     "./Pages/DadosUser/index.html",
