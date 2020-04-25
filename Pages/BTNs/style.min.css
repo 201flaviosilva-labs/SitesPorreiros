@@ -1,1 +1,1 @@
-*{margin:0;padding:0}html,body{height:100%;width:100%}
+*{margin:0;padding:0}html{width:100%}html body{width:100%}html body main{margin:10px}html body main button{outline:none}html body main .btn1{padding:4px 10px;border-radius:20px;border:1px solid black;color:black;font-size:20px}html body main .btn1:hover{background-color:#d6d6d6}html body main .btn1:hover:active{background-color:#acacac}

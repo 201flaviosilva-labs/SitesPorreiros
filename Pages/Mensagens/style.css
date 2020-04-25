@@ -1,84 +1,173 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+  height: 100%;
 }
 
+html,
+body,
 header,
 footer,
-main,
-.xps {
-    width: 100%;
-}
-
-header {
-    height: 100px;
-    background-color: blueviolet;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-h1 {
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 10px 50px;
-    background-color: indigo;
-}
-
 main {
-    height: 90%;
-    background-color: orangered;
-    display: flex;
-    flex-direction: column;
+  background-color: orangered;
+  width: 100%;
 }
 
-.balloon {
-    background-color: green;
-    margin: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    width: 50%;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.balloon:nth-child(even) {
-    background-color: blue;
-    align-self: flex-end;
-    color: whitesmoke;
+body header {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px 0;
+  background-color: cadetblue;
 }
 
-footer {
-    background-color: royalblue;
-    position: fixed;
-    bottom: 0;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+body header h1 {
+  width: 90%;
+  padding: 10px 50px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid darkgreen;
+  background-color: indigo;
+  text-shadow: 2px -2px darkmagenta;
+  box-shadow: 5px 5px 5px darkblue;
 }
 
-#CorJogador {
-    border: 1px solid black;
-    border-radius: 20px;
-    font-size: 20px;
-    padding: 10px;
+body main {
+  flex-grow: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-footer input {
-    border: 1px solid black;
-    border-radius: 20px;
-    width: 90%;
-    height: 90%;
-    font-size: 20px;
-    padding: 0 10px;
+body main ul {
+  width: 1000px;
+  height: 500px;
+  box-sizing: border-box;
+  padding: 2px 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: green;
+  box-shadow: 20px 20px 5px gold;
+  /* width */
+  /* Track */
+  /* Handle */
 }
 
-.CorJogador {
-    background-color: green;
+body main ul::-webkit-scrollbar {
+  width: 14px;
+  border-radius: 10px;
+}
+
+body main ul::-webkit-scrollbar-track {
+  background: tan;
+  border-radius: 10px;
+  border: 2px solid blueviolet;
+}
+
+body main ul::-webkit-scrollbar-track:hover {
+  border: 2px solid violet;
+  background: turquoise;
+}
+
+body main ul::-webkit-scrollbar-thumb {
+  background: teal;
+  border-radius: 10px;
+}
+
+body main ul::-webkit-scrollbar-thumb:hover {
+  background: tomato;
+}
+
+body main li {
+  width: 100%;
+  margin: 6px;
+  padding: 4px 10px;
+  box-sizing: border-box;
+  list-style: none;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: darkgoldenrod;
+  color: aqua;
+}
+
+body main li:nth-child(even) {
+  text-align: end;
+  background-color: blue;
+  color: whitesmoke;
+}
+
+body footer {
+  flex-grow: 1;
+}
+
+body footer form {
+  height: 70%;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: royalblue;
+}
+
+body footer form input {
+  width: 90%;
+  height: 90%;
+  padding: 0 10px;
+  font-size: 20px;
+  border: 1px solid black;
+  color: lightgreen;
+  text-shadow: 1px 2px firebrick;
+  border-radius: 20px;
+}
+
+body footer form button {
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 800;
+  border-radius: 20px;
+  outline: none;
+  text-decoration: underline wavy darkorange;
+  background-color: green;
+  color: khaki;
+  border: 4px solid turquoise;
+  text-shadow: 4px 4px red;
+  box-shadow: 10px -10px 4px hotpink;
+}
+
+body footer form button:hover {
+  text-decoration: underline wavy wheat;
+  color: yellow;
+  background-color: indigo;
+  outline: 2px solid royalblue;
+  border: 2px solid tomato;
+  text-shadow: 4px -4px ivory;
+  box-shadow: -8px 8px 2px palegreen;
+}
+
+body footer form button:hover:active {
+  text-decoration: underline wavy aqua;
+  color: saddlebrown;
+  background-color: seagreen;
+  outline: 1px solid darkblue;
+  border: 1px solid darkmagenta;
+  text-shadow: 1px 1px 20px darkred;
+  box-shadow: 1px 1px 20px lime;
 }

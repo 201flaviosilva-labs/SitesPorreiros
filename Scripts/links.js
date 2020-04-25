@@ -2,7 +2,6 @@ export const links = [
     "./Pages/AnimacaoBola/index.html",
     "./Pages/AnimacaoDiv/index.html",
     "./Pages/BatataMan/index.html",
-    "./Pages/Bolhas/index.html",
     "./Pages/BoxStyle/index.html",
     "./Pages/BTNs/index.html",
     "./Pages/Calculadora/index.html",
