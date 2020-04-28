@@ -5,7 +5,7 @@ const verde = document.getElementById("verde");
 let count = 0;
 let flag = true;
 
-setInterval(main, 750);
+setInterval(main, 500);
 
 function main() {
     console.log(count)
