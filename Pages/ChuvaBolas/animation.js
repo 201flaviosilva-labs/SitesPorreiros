@@ -17,7 +17,7 @@ function funcMudarCor() {
 }
 
 
-setInterval(() => criarBol(), 500);
+setInterval(() => criarBol(), 750);
 
 function criarBol() {
     const corMudar = funcMudarCor();
