@@ -31,11 +31,14 @@ IndiomaSlect.onchange = function function1() {
         case "Ingles":
             indioma = ind.Ingles;
             break;
-        case "Portugues":
-            indioma = ind.Portugues;
-            break;
         case "Frances":
             indioma = ind.Frances;
+            break;
+        case "Japones":
+            indioma = ind.Japones;
+            break;
+        case "Portugues":
+            indioma = ind.Portugues;
             break;
         case "Russo":
             indioma = ind.Russo;
