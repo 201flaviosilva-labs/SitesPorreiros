@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Covid19</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        fieldset {
+            padding: 10px;
+            border: 2px solid black;
+        }
+        
+        legend {
+            width: auto;
+            padding: 0 10px;
+            border: 2px solid black;
+        }
+        
+        select {
+            margin: 10px 0;
+        }
+        
+        img {
+            height: 300px;
+            width: 500px;
+        }
+        
+        article {
+            width: 100%;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+        }
+        
+        ul li {
+            height: 40px;
+            padding: 12px 20px;
+        }
+        /* @media only screen and (max-width: 660px) {
+            article ul#ListaPaises li {
+                font-size: 10px;
+            }
+        } */
+    </style>
+
+    <h1>Covid19</h1>
+
+    <fieldset>
+        <legend id="legendPais">{Pais}</legend>
+        <h3>Infetados: <span id="Infetados">{Infetados}</span></h3>
+        <h3>Recuperados: <span id="Recuperados">{Recuperados}</span></h3>
+        <h3>Mortos: <span id="Mortos">{Mortos}</span></h3>
+    </fieldset>
+
+    <select class="selectpicker" id="PaisesSelect">
+        <option disabled>Seleciona um Pais</option>
+    </select>
+
+    <img src="https://static.vecteezy.com/system/resources/previews/000/954/018/non_2x/doctor-fighting-covid-19-in-cartoon-style-vector.jpg" alt="covid19">
+
+
+    <!-- <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li> -->
+
+    <article>
+        <ul class="list-group" id="ListaPaises">
+            <li class="list-group-item list-group-item-info">Pais</li>
+        </ul>
+        <ul class="list-group" id="ListaInfetados">
+            <li class="list-group-item list-group-item-warning">Infetados</li>
+        </ul>
+        <ul class="list-group" id="ListaRecuperados">
+            <li class="list-group-item list-group-item-success">Recuperados</li>
+        </ul>
+        <ul class="list-group" id="ListaMortos">
+            <li class="list-group-item list-group-item-dark">Mortos</li>
+        </ul>
+    </article>
+
+    <a href="https://201flaviosilva.github.io/">Flávio Silva</a>
+
+    <script>
+        const PaisesSelect = document.getElementById("PaisesSelect");
+        const legendPais = document.getElementById("legendPais");
+
+        const Infetados = document.getElementById("Infetados");
+        const Recuperados = document.getElementById("Recuperados");
+        const Mortos = document.getElementById("Mortos");
+        const Atualizacao = document.getElementById("Atualizacao");
+
+        // Listas
+        const ListaPaises = document.getElementById("ListaPaises");
+        const ListaInfetados = document.getElementById("ListaInfetados");
+        const ListaRecuperados = document.getElementById("ListaRecuperados");
+        const ListaMortos = document.getElementById("ListaMortos");
+
+        var dados;
+
+        console.log("Api: https://covid19.mathdro.id/api/countries");
+        console.log("Iamgem: https://static.vecteezy.com/system/resources/previews/000/954/018/non_2x/doctor-fighting-covid-19-in-cartoon-style-vector.jpg");
+
+        fetch('https://covid19.mathdro.id/api/countries')
+            .then((response) => response.json())
+            .then((data) => {
+                data = data.countries;
+                dados = data;
+                for (let i = 0; i < data.length; i++) {
+                    let opt = data[i].name;
+                    const el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    if (opt == "Portugal") {
+                        el.selected = "selected";
+                        legendPais.innerHTML = opt;
+                    }
+                    PaisesSelect.appendChild(el);
+                }
+                const dadoIsoPt = data[135].iso2;
+                mudarPais(dadoIsoPt);
+                apresentarLista();
+            });
+
+        async function apresentarLista() {
+            for (let index = 0; index < dados.length; index++) {
+                fetch(`https://covid19.mathdro.id/api/countries/${dados[index].iso2}`)
+                    .then((response) => response.json())
+                    .then((data) => {
+
+                        const li1 = document.createElement("li");
+                        const li2 = document.createElement("li");
+                        const li3 = document.createElement("li");
+                        const li4 = document.createElement("li");
+
+                        li1.innerHTML = dados[index].name;
+                        li2.innerHTML = data.confirmed.value;
+                        li3.innerHTML = data.recovered.value;
+                        li4.innerHTML = data.deaths.value;
+
+                        li1.title = "Pais";
+                        li2.title = "Infetados";
+                        li3.title = "Recuperados";
+                        li4.title = "Mortos";
+
+                        li1.classList.add("list-group-item");
+                        li1.classList.add("list-group-item-action");
+                        li2.classList.add("list-group-item");
+                        li2.classList.add("list-group-item-action");
+                        li3.classList.add("list-group-item");
+                        li3.classList.add("list-group-item-action");
+                        li4.classList.add("list-group-item");
+                        li4.classList.add("list-group-item-action");
+
+                        ListaPaises.appendChild(li1);
+                        ListaInfetados.appendChild(li2);
+                        ListaRecuperados.appendChild(li3);
+                        ListaMortos.appendChild(li4);
+
+                        if (index === dados.length - 1) {
+                            somaTotal();
+                        }
+                    });
+            }
+        }
+
+        function somaTotal() {
+            // https://covid19.mathdro.id/api   
+            fetch("https://covid19.mathdro.id/api")
+                .then(resp => resp.json())
+                .then(data => {
+                    const li1 = document.createElement("li");
+                    const li2 = document.createElement("li");
+                    const li3 = document.createElement("li");
+                    const li4 = document.createElement("li");
+
+                    li1.innerHTML = "Total";
+                    li2.innerHTML = new Intl.NumberFormat('pt-PT', {
+                        maximumSignificantDigits: 3
+                    }).format(data.confirmed.value);
+                    li3.innerHTML = new Intl.NumberFormat('pt-PT', {
+                        maximumSignificantDigits: 3
+                    }).format(data.recovered.value);
+                    li4.innerHTML = new Intl.NumberFormat('pt-PT', {
+                        maximumSignificantDigits: 3
+                    }).format(data.deaths.value);
+
+                    li2.title = "Infetados";
+                    li3.title = "Recuperados";
+                    li4.title = "Mortos";
+
+                    li1.classList.add("list-group-item");
+                    li1.classList.add("list-group-item-danger");
+                    li2.classList.add("list-group-item");
+                    li2.classList.add("list-group-item-danger");
+                    li3.classList.add("list-group-item");
+                    li3.classList.add("list-group-item-danger");
+                    li4.classList.add("list-group-item");
+                    li4.classList.add("list-group-item-danger");
+
+                    ListaPaises.appendChild(li1);
+                    ListaInfetados.appendChild(li2);
+                    ListaRecuperados.appendChild(li3);
+                    ListaMortos.appendChild(li4);
+                })
+        }
+
+        PaisesSelect.addEventListener("change",
+            () => {
+                const selectValue = PaisesSelect.value;
+                legendPais.innerHTML = selectValue;
+                for (let index = 0; index < dados.length; index++) {
+                    if (dados[index].name === selectValue) {
+                        mudarPais(dados[index].iso2);
+                        break;
+                    }
+                }
+            });
+
+        function mudarPais(iso2) {
+            fetch(`https://covid19.mathdro.id/api/countries/${iso2}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    Infetados.innerHTML = new Intl.NumberFormat('pt-PT', {
+                        maximumSignificantDigits: 3
+                    }).format(data.confirmed.value);
+
+                    Recuperados.innerHTML = new Intl.NumberFormat('pt-PT', {
+                        maximumSignificantDigits: 3
+                    }).format(data.recovered.value);
+
+                    Mortos.innerHTML = new Intl.NumberFormat('pt-PT', {
+                        maximumSignificantDigits: 3
+                    }).format(data.deaths.value);
+                });
+        }
+    </script>
+</body>
+
+</html>
