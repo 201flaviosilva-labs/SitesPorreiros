@@ -21,6 +21,7 @@ export const links = [
     "./Pages/Quiz/index.html",
     "./Pages/SegueRato/index.html",
     "./Pages/Semaforo/index.html",
+    "./Pages/Skills/index.html",
     "./Pages/SVGImgs/index.html",
     "./Pages/Tarefas/index.html",
     "./Pages/Tempo/index.html",
