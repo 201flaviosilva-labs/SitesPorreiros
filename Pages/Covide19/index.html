@@ -125,8 +125,7 @@
                     }
                     PaisesSelect.appendChild(el);
                 }
-                const dadoIsoPt = data[135].iso2;
-                mudarPais(dadoIsoPt);
+                mudarPais("PT");
                 apresentarLista();
             });
 
@@ -142,9 +141,18 @@
                         const li4 = document.createElement("li");
 
                         li1.innerHTML = dados[index].name;
-                        li2.innerHTML = data.confirmed.value;
-                        li3.innerHTML = data.recovered.value;
-                        li4.innerHTML = data.deaths.value;
+
+                        li2.innerHTML = new Intl.NumberFormat('pt-PT', {
+                            maximumSignificantDigits: 3
+                        }).format(data.confirmed.value);
+
+                        li3.innerHTML = new Intl.NumberFormat('pt-PT', {
+                            maximumSignificantDigits: 3
+                        }).format(data.recovered.value);
+
+                        li4.innerHTML = new Intl.NumberFormat('pt-PT', {
+                            maximumSignificantDigits: 3
+                        }).format(data.deaths.value);
 
                         li1.title = "Pais";
                         li2.title = "Infetados";
