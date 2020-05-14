@@ -12,6 +12,7 @@ export const links = [
     "./Pages/DancaQuadrado/index.html",
     "./Pages/DescobrirPP/index.html",
     "./Pages/EventosRato/index.html",
+    "./Pages/FormNetlify/index.html",
     "./Pages/Iluminacao/index.html",
     "./Pages/Linguagem/index.html",
     "./Pages/Loading/index.html",
