@@ -17,6 +17,7 @@ export const links = [
     "./Pages/Linguagem/index.html",
     "./Pages/Loading/index.html",
     "./Pages/Mensagens/index.html",
+    "./Pages/Ninica/index.html",
     "./Pages/PedraPapelTesoura/index.html",
     "./Pages/Publicidade/index.html",
     "./Pages/Quiz/index.html",
