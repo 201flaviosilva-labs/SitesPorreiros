@@ -1,7 +1,8 @@
 # Nomes Fixes para Cães:
 
 - Dogmeat
-- Oscar
-- Snoopy
 - Bandido
+- Simba
+- Oscar
 - Malandro
+- Snoopy

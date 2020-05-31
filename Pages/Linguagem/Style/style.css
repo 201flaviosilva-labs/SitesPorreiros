@@ -3,7 +3,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   transition: 2s;
   cursor: cell;
 }
@@ -24,10 +24,11 @@ body header {
 }
 
 body header select {
-  float: right;
-  margin: 24px 20px 0 0;
   width: 150px;
   height: 30px;
+  margin: 24px 20px 0 0;
+  float: right;
+  outline: none;
   border: 2px solid whitesmoke;
   border-radius: 10px;
   font-size: 18px;

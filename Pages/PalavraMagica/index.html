@@ -21,7 +21,6 @@
         body,
         main {
             width: 100%;
-            height: 100%;
         }
 
         body {
@@ -38,11 +37,14 @@
             background-color: aqua;
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
-            text-shadow: 2px 2px 4px blue, -8px 8px 4px red, 4px -4px 4px green, -2px -2px 2px yellow, -4px -4px 4px white;
+            font-weight: 900;
+            color: white;
+            letter-spacing: 10px;
+            text-shadow: 8px 8px 4px blue, -8px 8px 4px red, 8px -8px 4px green, -8px -8px 2px yellow;
         }
 
         header {
-            width: 33%;
+            width: 50%;
             padding: 10px;
             display: flex;
             flex-direction: column;
@@ -54,19 +56,42 @@
             width: 100%;
         }
 
+        span {
+            font-size: 20px;
+        }
+
+        input {
+            text-shadow: 1px 1px aqua;
+        }
+
         input,
         button {
             padding: 6px 8px;
             border-radius: 2px;
-            border: 1px solid black;
+            border: 1px solid red;
+            box-shadow: 1px 1px 5px black, -1px -1px 5px black;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+        input:hover,
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        input:active,
+        button:active {
+            transform: scale(.99);
+            box-shadow: 4px 4px 4px black;
         }
 
         main {
+            margin-top: 10px;
+            padding: 10px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-column-gap: 10px;
             grid-row-gap: 10px;
-            background-color: black;
         }
 
         main div {
@@ -86,6 +111,7 @@
 
         main div:nth-child(4n) {
             background-color: blue;
+            color: chartreuse;
         }
 
         main div:nth-child(5n) {
@@ -94,6 +120,7 @@
 
         main div:nth-child(6n) {
             background-color: yellow;
+            color: black;
         }
 
         main div:nth-child(7n) {
@@ -106,6 +133,7 @@
 
         main div:nth-child(9n) {
             background-color: indigo;
+            color: azure;
         }
 
         main div:nth-child(10n) {
@@ -131,11 +159,41 @@
         // Metodos de strigns tipo ordenar as letras por ordem alfabetica, apagar as consuantes, as vogais, contar as letras, contas as palavras, meter tudo em letras gandes, meter tudo em letras pequenas, meter as palavras/ frases ao contrário
 
         document.getElementById("btn").addEventListener("click", () => {
-            const textBox = document.getElementById("textBox").value;
+            const textBox = (document.getElementById("textBox").value).replace(/</g, "&lt;").replace(/>/g, "&gt;");
             const main = document.getElementById("main");
             while (main.firstChild) main.removeChild(main.firstChild);
+
             const magia = [
-                `Núm. Caracteres ${textBox.length}`,
+                `${textBox.length}`,
+                `${textBox.toUpperCase()}`,
+                `${textBox.toLowerCase()}`,
+                `${textBox.trim()}`,
+                `${textBox.split("")}`,
+                `${textBox.split("").join(" -> ")}`,
+                `${textBox.split(" ").join(" -> ")}`,
+                `${textBox.substr(1)}`,
+                `${Number(textBox)}`,
+                `${textBox.replace(/aA/gi, "A")}`,
+                `${textBox.replace(/eE/gi, "E")}`,
+                `${textBox.replace(/iI/gi, "I")}`,
+                `${textBox.replace(/oO/gi, "O")}`,
+                `${textBox.replace(/uU/gi, "U")}`,
+                `${textBox.replace(/[aeiou]/ig, '')}`,
+                `${textBox.replace(/[a]/ig, '')}`,
+                `${textBox.replace(/[e]/ig, '')}`,
+                `${textBox.replace(/[i]/ig, '')}`,
+                `${textBox.replace(/[o]/ig, '')}`,
+                `${textBox.replace(/[u]/ig, '')}`,
+                `${textBox.replace(/[bcdfghjklmnpqrstvxwyz]/ig, '')}`,
+                `${textBox.replace(/[^a-z]/g, '')}`,
+                `${textBox.replace(/[^A-Z]/g, '')}`,
+                `${textBox.replace(/[^0-9]/g, '')}`,
+                `${textBox.replace(/[^a-zA-Z]/g, '')}`,
+                `${textBox.replace(/[^a-zA-Z0-9]/g, '')}`,
+                `${textBox.replace(/^[!"#$%&/()=?*/]/g, '')}`,
+                `${textBox.split("").reverse().join("").replace(/[aeiou]/ig, '')}`,
+                `${textBox.split("").reverse().join("").replace(/[bcdfghjklmnpqrstvxwyz]/ig, '')}`,
+                `${textBox.split("").reverse().join("").replace(/[^a-zA-Z]/g, '')}`,
             ];
 
             magia.map(e => {
