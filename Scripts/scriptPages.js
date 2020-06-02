@@ -2,11 +2,19 @@ import { links } from "./links.js";
 
 const ulTag = document.getElementById("ul");
 
-links.map((e) => {
-  let valor = e;
+links.map((valor) => {
   const li = document.createElement("li");
   const a = document.createElement("a");
-  a.innerHTML = valor.replace("./Pages/", "").replace("/index.html", "");
+  a.innerHTML = valor
+    .replace("https://", "")
+    .replace("http://", "")
+    .replace("./Pages/", "")
+    .replace("/index.html", "")
+    .replace(".github.io", "")
+    .replace(".netlify.app", "")
+    .replace(".netlify.com", "")
+    .replace(".epizy.com", "")
+    .replace("/", "");
   a.href = valor;
   li.appendChild(a);
   ulTag.appendChild(li);

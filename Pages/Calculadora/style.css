@@ -54,13 +54,16 @@ body main div#btnsCalc button {
   outline: none;
   font-size: 20px;
   border-radius: 2px;
-  border: none;
+  border: 1px solid black;
   text-align: center;
   background: #898d8b;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 body main div#btnsCalc button:hover {
-  border: 1px solid black;
+  z-index: 100;
+  transform: scale(1.01);
 }
 
 body main div#btnsCalc button:active {

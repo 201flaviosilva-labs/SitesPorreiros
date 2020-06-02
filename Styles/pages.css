@@ -6,7 +6,7 @@ main ul {
   padding: 4px;
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 4px;
+  grid-gap: 4px 4px;
   border-radius: 10px;
   background-color: whitesmoke;
 }

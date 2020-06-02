@@ -1,74 +1,77 @@
 // Variaveis
 $borderradios: 4px;
-// ----
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%);
-    main {
-        padding: 10px;
-        border-radius: $borderradios;
-        background-color: red;
-        * {
-            color: whitesmoke;
-        }
-        div#resp {
-            width: 100%;
-            box-sizing: border-box;
-            padding: 10px 20px;
-            border-top-left-radius: $borderradios;
-            border-top-right-radius: $borderradios;
-            border-bottom: 2px solid black;
-            overflow-x: auto;
-            font-size: 100%;
-            text-align: end;
-            background-color: #005a5a;
-        }
-        div#btnsCalc {
-            background-color: #bdbdbd;
-            display: grid;
-            grid-gap: 2px;
-            grid-template-columns: repeat(4, 50px);
-            padding: 2px;
-            border-bottom-left-radius: $borderradios;
-            border-bottom-right-radius: $borderradios;
-            button {
-                padding: 10px;
-                outline: none;
-                font-size: 20px;
-                border-radius: 2px;
-                border: none;
-                text-align: center;
-                background: rgb(137, 141, 139);
-                &:hover {
-                    border: 1px solid black;
-                }
-                &:active {
-                    border: 2px solid black;
-                }
-                #subCubo {
-                    vertical-align: super;
-                    font-size: smaller;
-                }
-                &#btn-Igual {
-                    grid-column: 1 / span 3;
-                }
-                &#btn-Zero {
-                    grid-column: 1 / span 3;
-                }
-            }
-        }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%);
+  main {
+    padding: 10px;
+    border-radius: $borderradios;
+    background-color: red;
+    * {
+      color: whitesmoke;
     }
+    div#resp {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 20px;
+      border-top-left-radius: $borderradios;
+      border-top-right-radius: $borderradios;
+      border-bottom: 2px solid black;
+      overflow-x: auto;
+      font-size: 100%;
+      text-align: end;
+      background-color: #005a5a;
+    }
+    div#btnsCalc {
+      background-color: #bdbdbd;
+      display: grid;
+      grid-gap: 2px;
+      grid-template-columns: repeat(4, 50px);
+      padding: 2px;
+      border-bottom-left-radius: $borderradios;
+      border-bottom-right-radius: $borderradios;
+      button {
+        padding: 10px;
+        outline: none;
+        font-size: 20px;
+        border-radius: 2px;
+        border: 1px solid black;
+        text-align: center;
+        background: rgb(137, 141, 139);
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover {
+          z-index: 100;
+          transform: scale(1.01);
+        }
+        &:active {
+          border: 2px solid black;
+        }
+        #subCubo {
+          vertical-align: super;
+          font-size: smaller;
+        }
+        &#btn-Igual {
+          grid-column: 1 / span 3;
+        }
+        &#btn-Zero {
+          grid-column: 1 / span 3;
+        }
+      }
+    }
+  }
 }
