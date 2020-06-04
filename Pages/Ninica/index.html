@@ -28,10 +28,32 @@
         h1 {
             color: white;
         }
+
+        div {
+            display: flex;
+            align-items: center;
+        }
+
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        img {
+            margin: 0 6px;
+        }
     </style>
 
     <h1>Ninica</h1>
-    <img src="./Assets/Ninica1.jpeg" alt="Ninica">
+    <div>
+        <button id="MudarE">👈</button>
+        <img src="./Assets/Ninica1.jpeg" alt="Ninica" id="ImgNinica">
+        <button id="MudarD">👉</button>
+    </div>
+
+    <script src="./animation.js"></script>
 </body>
 
 </html>

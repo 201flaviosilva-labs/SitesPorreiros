@@ -35,6 +35,6 @@ export const links = [
   "./Pages/Visitas/index.html",
 ].concat([
   "https://201flaviosilva.github.io/",
-  "http://carteiraonline.epizy.com/",
-  "https://vanillajavascript.netlify.app/",
+  // "http://carteiraonline.epizy.com/",
+  // "https://vanillajavascript.netlify.app/",
 ]);

@@ -5,6 +5,7 @@
 
 html {
   width: 100%;
+  background-color: white;
 }
 
 html body {
@@ -17,6 +18,7 @@ html body main {
 
 html body main button {
   outline: none;
+  cursor: pointer;
 }
 
 html body main .btn1 {
@@ -31,6 +33,174 @@ html body main .btn1:hover {
   background-color: #d6d6d6;
 }
 
-html body main .btn1:hover:active {
+html body main .btn1:active {
   background-color: #acacac;
+}
+
+html body main .btn2 {
+  border: 2px solid red;
+  border-radius: 4px;
+  padding: 6px 8px;
+  background-color: white;
+  color: red;
+  transition: 0.5s;
+}
+
+html body main .btn2:hover {
+  background-color: red;
+  color: white;
+}
+
+html body main .btn2:active {
+  color: red;
+  transform: scale(0.95);
+}
+
+html body main .btn3 {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 6px 8px;
+  background-color: white;
+  transition: 0.5s;
+  box-shadow: 2px 2px 4px black;
+}
+
+html body main .btn3:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 6px black;
+}
+
+html body main .btn3:active {
+  transform: scale(0.95);
+  box-shadow: 1px 1px 2px black;
+}
+
+html body main .btn4 {
+  border: none;
+  border-radius: 2px;
+  padding: 6px 8px;
+  background-color: white;
+  box-shadow: 2px 2px 4px black;
+  transition: 0.5s;
+}
+
+html body main .btn4:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 6px grey;
+}
+
+html body main .btn4:active {
+  transform: scale(1.08);
+  color: white;
+  background-color: black;
+}
+
+html body main .btn5 {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 10px 14px;
+  background-color: green;
+  box-shadow: 0 10px #999;
+  transition: 0.5s;
+}
+
+html body main .btn5:hover {
+  background-color: greenyellow;
+}
+
+html body main .btn5:active {
+  background-color: yellow;
+  box-shadow: 0 2px #666;
+  transform: translateY(8px);
+}
+
+html body main .btn6 {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 10px 14px;
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+html body main .btn6:hover {
+  transform: translateX(-5px);
+}
+
+html body main .btn6:active {
+  transform: translateX(20px);
+  color: white;
+  background-color: black;
+}
+
+html body main .btn7 {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 10px 14px;
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+html body main .btn7:active {
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+  color: white;
+  background-color: black;
+}
+
+html body main .btn8 {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 10px 14px;
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+html body main .btn8:hover {
+  transform: rotate(-45deg);
+}
+
+html body main .btn8:active {
+  transform: rotate(180deg);
+  color: white;
+  background-color: black;
+}
+
+html body main .btn9 {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 10px 14px;
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+html body main .btn9:hover {
+  transform: scale(0.9, 0.7);
+}
+
+html body main .btn9:active {
+  transform: scale(2, 1.5);
+  color: white;
+  background-color: black;
+}
+
+html body main .btn10 {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 10px 14px;
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+html body main .btn10:hover {
+  transform: skew(-5deg, -5deg);
+}
+
+html body main .btn10:active {
+  transform: skew(20deg, 10deg);
+  color: white;
+  background-color: black;
 }
