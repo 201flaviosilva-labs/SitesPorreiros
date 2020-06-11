@@ -6,3 +6,4 @@
 - Oscar
 - Malandro
 - Snoopy
+- Black
