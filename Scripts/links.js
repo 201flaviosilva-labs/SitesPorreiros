@@ -7,6 +7,7 @@ export const links = [
   "./Pages/BTNs/index.html",
   "./Pages/Calculadora/index.html",
   "./Pages/ChuvaBolas/index.html",
+  "./Pages/Cores/index.html",
   "./Pages/Covide19/index.html",
   "./Pages/DadosUser/index.html",
   "./Pages/DancaQuadrado/index.html",
