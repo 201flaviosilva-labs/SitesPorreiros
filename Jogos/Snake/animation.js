@@ -17,20 +17,23 @@ const speed = 10;
 let frutX = canvasWidth / 2 + playerWidth / 2;
 let frutY = canvasHeight / 2 + playerHeight / 2;
 
-// function draw() show in the screen all objects
-draw();
+setInterval(draw, 1000 / 15);
+
 function draw() {
 	ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 	ctx.fillStyle = "white";
 	ctx.fillRect(playerX, playerY, playerWidth, playerHeight);
 	ctx.fillStyle = "blue";
 	ctx.fillRect(playerX, playerY, playerWidth, playerHeight);
+
+	drawSnake();
+	for (let i = 0; i < trail.length; i++) {
+		if (playerX == trail[i].x &&
+			playerY == trail[i].y) console.log("Beep");
+	}
 }
 
 document.addEventListener("keydown", (e) => moverJogador(e));
-// This function move the player
-// Move the Player by keyboard
-// if Player touch in the canvas wall
 function moverJogador(e) {
 	const keyCode = e.keyCode;
 
@@ -45,15 +48,6 @@ function moverJogador(e) {
 	if (playerX > canvasWidth - playerWidth) playerX = canvasWidth - playerWidth;
 	if (playerY < playerHeight - speed) playerY = 0;
 	if (playerY > canvasHeight - playerHeight) playerY = canvasHeight - playerHeight;
-
-
-	draw();
-	drawSnake();
-
-	for (let i = 0; i < trail.length; i++) {
-		if (playerX == trail[i].x &&
-			playerY == trail[i].y) console.log("Beep");
-	}
 }
 
 

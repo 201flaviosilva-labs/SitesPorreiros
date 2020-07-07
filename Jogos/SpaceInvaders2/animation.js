@@ -97,7 +97,7 @@ function moverJogador(e) {
 	desenhar();
 }
 
-// Deteta se o invasor colidio com alguma das paredes
+// Deteta se o invasor colidio com o tiro
 function inavasorColisao() {
 	if (tiroX > invasorX && tiroX < invasorX + invasorDiametro &&
 		tiroY > invasorY && tiroY < invasorY + invasorDiametro) pontos++;

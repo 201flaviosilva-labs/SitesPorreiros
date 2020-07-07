@@ -45,6 +45,7 @@ export const links = [ // Paginas
   "./Jogos/Quiz/index.html",
   "./Jogos/SpaceInvaders/index.html",
   "./Jogos/SpaceInvaders2/index.html",
+  "./Jogos/SpaceInvaders3/index.html",
 ]).concat([ // Externos
   "https://201flaviosilva.github.io/",
   // "http://carteiraonline.epizy.com/",
