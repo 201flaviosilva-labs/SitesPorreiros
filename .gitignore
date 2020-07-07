@@ -1,2 +1,8 @@
 .DS_Store
 .vscode/
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
