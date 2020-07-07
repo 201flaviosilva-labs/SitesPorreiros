@@ -1,5 +1,4 @@
-export const links = [
-  "./Pages/AdivinhaNumero/index.html",
+export const links = [ // Paginas
   "./Pages/AnimacaoBola/index.html",
   "./Pages/AnimacaoDiv/index.html",
   // "./Pages/BatataMan/index.html",
@@ -22,9 +21,7 @@ export const links = [
   "./Pages/Ninica/index.html",
   // "./Pages/OQueFazer/index.html",
   "./Pages/PalavraMagica/index.html",
-  "./Pages/PedraPapelTesoura/index.html",
   // "./Pages/Publicidade/index.html",
-  "./Pages/Quiz/index.html",
   "./Pages/SegueRato/index.html",
   "./Pages/SegundoContador/index.html",
   "./Pages/Semaforo/index.html",
@@ -34,7 +31,21 @@ export const links = [
   "./Pages/Tarefas/index.html",
   "./Pages/Tempo/index.html",
   "./Pages/Visitas/index.html",
-].concat([
+].concat([ // Jogos
+  "./Jogos/AdivinhaNumero/index.html",
+  "./Jogos/ClickGame/index.html",
+  "./Jogos/EvolucaoHistorica/index.html",
+  "./Jogos/MundoAberto/index.html",
+  "./Jogos/MundoAberto2/index.html",
+  "./Jogos/MundoAberto3/index.html",
+  "./Jogos/PedraPapelTesoura/index.html",
+  "./Jogos/Pong/index.html",
+  "./Jogos/Pong/index.html",
+  "./Jogos/Quix/index.html",
+  "./Jogos/Quiz/index.html",
+  "./Jogos/SpaceInvaders/index.html",
+  "./Jogos/SpaceInvaders2/index.html",
+]).concat([ // Externos
   "https://201flaviosilva.github.io/",
   // "http://carteiraonline.epizy.com/",
   // "https://vanillajavascript.netlify.app/",

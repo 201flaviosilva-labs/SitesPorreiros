@@ -9,6 +9,7 @@ links.map((valor) => {
     .replace("https://", "")
     .replace("http://", "")
     .replace("./Pages/", "")
+    .replace("./Jogos/", "")
     .replace("/index.html", "")
     .replace(".github.io", "")
     .replace(".netlify.app", "")

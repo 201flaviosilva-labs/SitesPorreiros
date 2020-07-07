@@ -112,12 +112,12 @@ btnMenu.addEventListener("click", () => {
     painel.classList.remove("classDispalayDefaut");
     imgRocha.classList.remove("classDispalayNone");
     imgRocha.classList.add("classDispalayDefaut");
-    imgMenu.src = "./img/menu.svg";
+    imgMenu.src = "./Assets/icons/menu.svg";
   } else {
     painel.classList.remove("classDispalayNone");
     painel.classList.add("classDispalayDefaut");
     imgRocha.classList.add("classDispalayNone");
     imgRocha.classList.remove("classDispalayDefaut");
-    imgMenu.src = "./img/x-circle.svg";
+    imgMenu.src = "./Assets/icons/x.svg";
   }
 });
