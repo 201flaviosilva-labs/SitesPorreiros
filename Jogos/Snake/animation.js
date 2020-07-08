@@ -1,74 +1,37 @@
-const canvas = document.getElementById("Canvas");
-const ctx = canvas.getContext("2d");
+const squares = document.querySelectorAll("div#Canvas div");
+const pontos = document.getElementById("pontos");
 
-const canvasWidth = canvas.width;
-const canvasHeight = canvas.height;
+const width = 10;
+let currentIndex = 0;
+let appleIndex = 0;
+let currentSnake = [2, 1, 0];
+let direction = 1;
+let score = 0;
+let speed = 1;
+let intervalTime = 0;
+let interval = 0;
 
-let trail = [{ x: 0, y: 10 }, { x: 10, y: 10 }, { x: 20, y: 10 }];
+document.addEventListener('keydown', control);
+function control(e) {
+	squares[currentIndex].classList.remove("snake");
 
-// Player
-const playerWidth = 10;
-const playerHeight = 10;
-let playerX = 30;
-let playerY = 10;
-let playerLatsPosition;
-const speed = 10;
-
-let frutX = canvasWidth / 2 + playerWidth / 2;
-let frutY = canvasHeight / 2 + playerHeight / 2;
-
-setInterval(draw, 1000 / 15);
-
-function draw() {
-	ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-	ctx.fillStyle = "white";
-	ctx.fillRect(playerX, playerY, playerWidth, playerHeight);
-	ctx.fillStyle = "blue";
-	ctx.fillRect(playerX, playerY, playerWidth, playerHeight);
-
-	drawSnake();
-	for (let i = 0; i < trail.length; i++) {
-		if (playerX == trail[i].x &&
-			playerY == trail[i].y) console.log("Beep");
-	}
+	if (e.keyCode === 39) direction = 1;
+	else if (e.keyCode === 38) direction = -width;
+	else if (e.keyCode === 37) direction = -1;
+	else if (e.keyCode === 40) direction = +width;
 }
 
-document.addEventListener("keydown", (e) => moverJogador(e));
-function moverJogador(e) {
-	const keyCode = e.keyCode;
-
-	playerLatsPosition = { x: playerX, y: playerY };
-
-	if (keyCode === 37) playerX -= speed;
-	if (keyCode === 39) playerX += speed;
-	if (keyCode === 38) playerY -= speed;
-	if (keyCode === 40) playerY += speed;
-
-	if (playerX < playerWidth - speed) playerX = 0;
-	if (playerX > canvasWidth - playerWidth) playerX = canvasWidth - playerWidth;
-	if (playerY < playerHeight - speed) playerY = 0;
-	if (playerY > canvasHeight - playerHeight) playerY = canvasHeight - playerHeight;
-}
-
-
-
-function drawSnake() {
-	advanceSnake();
-	trail.forEach(drawSnakePart);
-}
-
-function advanceSnake() {
-	const head = {
-		x: playerLatsPosition.x,
-		y: playerLatsPosition.y
-	};
-	trail.unshift(head);
-	trail.pop();
-}
-
-function drawSnakePart(trailPart) {
-	ctx.fillStyle = 'lightgreen'; // Fundo
-	ctx.strokestyle = 'darkgreen'; // Borda
-	ctx.fillRect(trailPart.x, trailPart.y, 10, 10);
-	ctx.strokeRect(trailPart.x, trailPart.y, 10, 10);
+function starGame() {
+	currentSnake.forEach(i => squares[i].classList.remove("snake"));
+	squares[appleIndex].classList.remove("apple");
+	clearInterval(interval);
+	score = 0;
+	// randomApple();
+	direction = 1;
+	pontos.innerHTML = score;
+	intervalTime = 1000;
+	currentSnake = [2, 1, 0];
+	currentIndex = 0;
+	currentSnake.forEach(i => squares[i].classList.add("snake"));
+	interval = setInterval(moveOutcomes, intervalTime);
 }

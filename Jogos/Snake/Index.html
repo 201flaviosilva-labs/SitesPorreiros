@@ -20,17 +20,139 @@
 			width: 100vw;
 			height: 100vh;
 			display: flex;
+			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			background-color: black;
 		}
 
-		#Canvas {
+		div#Canvas {
+			width: 200px;
+			height: 200px;
+			display: flex;
+			flex-wrap: wrap;
 			border: 1px solid red;
 			box-shadow: 0 0 20px red;
 		}
+
+		div#Canvas div {
+			width: 20px;
+			height: 20px;
+
+		}
+
+		.snake {
+			background-color: green;
+		}
+
+		.apple {
+			background-color: red;
+		}
 	</style>
-	<canvas id="Canvas" width="800px" height="600px"></canvas>
+	<p>pontos: <span id="pontos">0</span> </p>
+	<div id="Canvas">
+		<div class="snake"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div class="apple"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
 	<script src="./animation.js"></script>
 </body>
 
