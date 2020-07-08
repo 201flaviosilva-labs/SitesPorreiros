@@ -14,6 +14,8 @@ links.map((valor) => {
     .replace(".github.io", "")
     .replace(".netlify.app", "")
     .replace(".netlify.com", "")
+    .replace(".vercel.app", "")
+    .replace(".vercel.com", "")
     .replace(".epizy.com", "")
     .replace("/", "");
   a.href = valor;

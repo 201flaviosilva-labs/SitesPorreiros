@@ -41,14 +41,19 @@ export const links = [ // Paginas
   "./Jogos/MundoAberto3/index.html",
   "./Jogos/PedraPapelTesoura/index.html",
   "./Jogos/Pong/index.html",
-  "./Jogos/Pong/index.html",
-  "./Jogos/Quix/index.html",
   "./Jogos/Quiz/index.html",
+  "./Jogos/Rastro/index.html",
+  "./Jogos/Snake/index.html",
   "./Jogos/SpaceInvaders/index.html",
   "./Jogos/SpaceInvaders2/index.html",
   "./Jogos/SpaceInvaders3/index.html",
 ]).concat([ // Externos
   "https://201flaviosilva.github.io/",
-  // "http://carteiraonline.epizy.com/",
-  // "https://vanillajavascript.netlify.app/",
+  "http://carteiraonline.epizy.com/",
+  "https://phasergames.netlify.app/",
+  "https://sitesporreiros.netlify.app/",
+  "https://vanillajavascript.netlify.app/",
+  "https://gamesreact.vercel.app/",
+  "https://listatarefas.vercel.app/",
+  "https://reactcounter.vercel.app/"
 ]);

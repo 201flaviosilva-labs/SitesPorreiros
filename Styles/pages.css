@@ -1,5 +1,10 @@
-main {
-  width: 100%;
+body {
+  background-color: black;
+}
+
+header a h1 {
+  text-align: center;
+  color: white;
 }
 
 main ul {
