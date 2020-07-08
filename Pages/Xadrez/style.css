@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.Tabuleiro {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  border: 10px solid black;
+}
+
+div.Tabuleiro div:nth-child(-2n + 8),
+div.Tabuleiro div:nth-child(8) ~ div:nth-child(-2n + 15),
+div.Tabuleiro div:nth-child(16) ~ div:nth-child(-2n + 24),
+div.Tabuleiro div:nth-child(24) ~ div:nth-child(-2n + 31),
+div.Tabuleiro div:nth-child(32) ~ div:nth-child(-2n + 40),
+div.Tabuleiro div:nth-child(40) ~ div:nth-child(-2n + 47),
+div.Tabuleiro div:nth-child(48) ~ div:nth-child(-2n + 56),
+div.Tabuleiro div:nth-child(56) ~ div:nth-child(-2n + 63) {
+  background-color: black;
+  color: white;
+}

@@ -31,6 +31,7 @@ export const links = [ // Paginas
   "./Pages/Tarefas/index.html",
   "./Pages/Tempo/index.html",
   "./Pages/Visitas/index.html",
+  "./Pages/Xadrez/index.html",
 ].concat([ // Jogos
   "./Jogos/AdivinhaNumero/index.html",
   "./Jogos/ClickGame/index.html",

@@ -1,3 +1,8 @@
+header h1 {
+  margin-top: 10px;
+  color: whitesmoke;
+}
+
 main {
   display: flex;
 }
@@ -14,4 +19,8 @@ main a {
   letter-spacing: 4px;
   text-shadow: 2px 2px 6px rgb(225, 0, 255);
   box-shadow: 2px 4px whitesmoke;
+}
+
+footer a {
+  margin-bottom: 10px;
 }
