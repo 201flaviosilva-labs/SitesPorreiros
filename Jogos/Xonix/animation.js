@@ -57,7 +57,6 @@ function moverJogador(e) {
 	if (playerY < playerHeight - speed) playerY = 0;
 	if (playerY > canvasHeight - playerHeight) playerY = canvasHeight - playerHeight;
 
-
 	draw();
 
 	if (playerX == 0
