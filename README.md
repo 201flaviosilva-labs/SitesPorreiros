@@ -34,14 +34,3 @@
  - ## Visitas
 
     Quantos são?
-
-
-
-
----
-
-### Ideia de Nomes
-
-<!-- - A Teia Inútil
-- Sites Porreiros
-- Etisbew -->
