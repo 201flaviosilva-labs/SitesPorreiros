@@ -16,6 +16,7 @@ export const links = [ // Paginas
   // "./Pages/FontInfo/index.html",
   "./Pages/FormNetlify/index.html",
   "./Pages/Iluminacao/index.html",
+  "./Pages/Labirinto/index.html",
   "./Pages/Linguagem/index.html",
   "./Pages/Loading/index.html",
   "./Pages/Ninica/index.html",
