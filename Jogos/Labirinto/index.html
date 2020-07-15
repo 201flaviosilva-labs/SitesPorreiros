@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Labirinto</title>
+	<style>
+		body {
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			background-color: black;
+		}
+
+		h2 {
+			color: white;
+		}
+
+		canvas {
+			border: 1px solid red;
+			box-shadow: 0 0 20px red;
+		}
+
+		div button#btnFacil {
+			background-color: green
+		}
+
+		div button#btnMedio {
+			background-color: orange
+		}
+
+		div button#btnDificil {
+			background-color: red
+		}
+	</style>
+</head>
+
+<body>
+	<h2><span id="Tempo">00:00</span> ms</h2>
+	<canvas id="Canvas" width="500px" height="500px"></canvas>
+	<div>
+		<button id="btnFacil" onclick="defenirDificuldade('Facil')">Facil</button>
+		<button id="btnMedio" onclick="defenirDificuldade('Medio')">Médio</button>
+		<button id="btnDificil" onclick="defenirDificuldade('Dificil')">Dificil</button>
+	</div>
+
+	<script src="./script.js"></script>
+</body>
+
+</html>
