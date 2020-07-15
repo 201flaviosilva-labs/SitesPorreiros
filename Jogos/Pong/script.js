@@ -22,12 +22,12 @@ let playerPontos = 0;
 let computadorY = canvas.height / 2 - playerAltura / 2;
 let computadorPontos = 0;
 
-drawEverything();
+desenhar();
 canvas.addEventListener("click", () => pausa = setInterval(moveBall, 1000 / fps));
 drawTexto("Clica Para Começar", canvas.width / 2 - 180, canvas.height / 2);
 
 // Desenhar os objetos
-function drawEverything() {
+function desenhar() {
 	drawRect(0, 0, canvas.width, canvas.height, "black"); // Fundo
 
 	drawRect(10, playerY - 50, playerLargura, playerAltura, "white"); // Jogador
@@ -95,7 +95,7 @@ function moveBall() {
 
 	if ((ballY > canvas.height - 10) || (ballY < 0)) speedBallY = -speedBallY;
 
-	drawEverything();
+	desenhar();
 	moverComputador();
 }
 
