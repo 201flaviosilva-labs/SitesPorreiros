@@ -8,6 +8,7 @@ const maxY = parseInt(canvasHeight / tilleSize) - 1;
 
 let map = [];
 let dificulade = 0.9;
+let tempo = 0;
 
 let velocidade = tilleSize;
 
@@ -29,6 +30,10 @@ function defenirDificuldade(valor) {
 		}
 	}
 	map[maxX][maxY] = 2;
+
+	jogadorX = 0;
+	jogadorY = 0;
+	tempo = 0;
 	desenhar();
 }
 
@@ -72,7 +77,6 @@ function desenhar() {
 	}
 }
 
-let tempo = 0;
 let intevalo = setInterval(() => {
 	tempo++;
 	document.getElementById("Tempo").innerHTML = tempo;
