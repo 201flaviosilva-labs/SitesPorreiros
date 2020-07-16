@@ -31,6 +31,7 @@ function defenirDificuldade(valor) {
 	}
 	map[maxX][maxY] = 2;
 
+	podeMexer = true;
 	jogadorX = 0;
 	jogadorY = 0;
 	tempo = 0;
