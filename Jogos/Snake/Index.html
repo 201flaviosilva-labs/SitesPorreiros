@@ -32,9 +32,18 @@
 		}
 	</style>
 
-	<canvas id="Canvas" width="800px" height="600px"></canvas>>
+	<canvas id="Canvas" width="800px" height="600px"></canvas>
 
-	<script src="./animation.js"></script>
+	<script>
+		const canvas = document.getElementById("Canvas");
+		const ctx = canvas.getContext("2d");
+		const canvasWidth = canvas.width;
+		const canvasHeight = canvas.height;
+	</script>
+
+	<script src="./Jogador.js"></script>
+	<script src="./Maca.js"></script>
+	<script src="./script.js"></script>
 </body>
 
 </html>
