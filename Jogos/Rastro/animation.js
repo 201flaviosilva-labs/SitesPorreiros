@@ -72,3 +72,9 @@ function drawSnakePart(trailPart) {
 	ctx.fillRect(trailPart.x, trailPart.y, tilleSize, tilleSize);
 	ctx.strokeRect(trailPart.x, trailPart.y, tilleSize, tilleSize);
 }
+
+canvas.addEventListener("click", () => {
+	trail = [];
+	draw();
+	drawSnake();
+});
