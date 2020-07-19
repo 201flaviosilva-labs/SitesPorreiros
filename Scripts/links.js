@@ -23,6 +23,7 @@ export const links = [ // Paginas
   // "./Pages/OQueFazer/index.html",
   "./Pages/PalavraMagica/index.html",
   // "./Pages/Publicidade/index.html",
+  "./Pages/QuadradosColoridos/index.html",
   "./Pages/SegueRato/index.html",
   "./Pages/SegundoContador/index.html",
   "./Pages/Semaforo/index.html",
@@ -55,5 +56,6 @@ export const links = [ // Paginas
   "https://vanillajavascript.netlify.app/",
   "https://gamesreact.vercel.app/",
   "https://listatarefas.vercel.app/",
-  "https://reactcounter.vercel.app/"
+  "https://reactcounter.vercel.app/",
+  "https://201flaviosilva.github.io/TicTacToe/"
 ]);

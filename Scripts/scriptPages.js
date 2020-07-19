@@ -11,12 +11,14 @@ links.map((valor) => {
     .replace("./Pages/", "")
     .replace("./Jogos/", "")
     .replace("/index.html", "")
+    .replace("201flaviosilva", "")
     .replace(".github.io", "")
     .replace(".netlify.app", "")
     .replace(".netlify.com", "")
     .replace(".vercel.app", "")
     .replace(".vercel.com", "")
     .replace(".epizy.com", "")
+    .replace("/", "")
     .replace("/", "");
   a.href = valor;
   li.appendChild(a);
