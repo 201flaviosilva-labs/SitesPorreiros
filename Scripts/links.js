@@ -34,6 +34,7 @@ export const links = [ // Paginas
   "./Pages/Tempo/index.html",
   "./Pages/Visitas/index.html",
   "./Pages/Xadrez/index.html",
+  "./Pages/Youtube/index.html",
 ].concat([ // Jogos
   "./Jogos/AdivinhaNumero/index.html",
   // "./Jogos/ClickGame/index.html",

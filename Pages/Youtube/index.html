@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Boot</title>
+</head>
+
+<body>
+	<input type="text" id="Url" placeholder="Url"><br>
+	<input type="text" id="Tempo" placeholder="Tempo Segundos" value="60"><br>
+	<hr>
+	<iframe width="400" height="400" src="https://www.youtube.com/embed/fI7lulhQ2JU?autoplay=1&mute=1">
+	</iframe>
+	<iframe width="400" height="400" src="https://www.youtube.com/embed/fI7lulhQ2JU?autoplay=1&mute=1">
+	</iframe>
+	<iframe width="400" height="400" src="https://www.youtube.com/embed/fI7lulhQ2JU?autoplay=1&mute=1">
+	</iframe>
+	<iframe width="400" height="400" src="https://www.youtube.com/embed/fI7lulhQ2JU?autoplay=1&mute=1">
+	</iframe>
+	<iframe width="400" height="400" src="https://www.youtube.com/embed/fI7lulhQ2JU?autoplay=1&mute=1">
+	</iframe>
+	<iframe width="400" height="400" src="https://www.youtube.com/embed/fI7lulhQ2JU?autoplay=1&mute=1">
+	</iframe>
+	<iframe width="400" height="400" src="https://www.youtube.com/embed/fI7lulhQ2JU?autoplay=1&mute=1">
+	</iframe>
+	<iframe width="400" height="400" src="https://www.youtube.com/embed/fI7lulhQ2JU?autoplay=1&mute=1">
+	</iframe>
+	<iframe width="400" height="400" src="https://www.youtube.com/embed/fI7lulhQ2JU?autoplay=1&mute=1">
+	</iframe>
+	<iframe width="400" height="400" src="https://www.youtube.com/embed/fI7lulhQ2JU?autoplay=1&mute=1">
+	</iframe>
+	<hr>
+
+	<script>
+		const inputUrl = document.getElementById("Url");
+		const inputTempo = document.getElementById("Tempo");
+		const iframe = document.querySelectorAll("iframe");
+		let contador = 0;
+
+		setInterval(() => {
+			contador++;
+			if (contador == Number(inputTempo.value)) {
+				for (let i = 0; i < iframe.length; i++) iframe[i].src = `https://www.youtube.com/embed/${inputUrl.value}?autoplay=1&mute=1`;
+				contador = 0;
+			}
+		}, 1000);
+	</script>
+</body>
+
+</html>
