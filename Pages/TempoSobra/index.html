@@ -4,20 +4,44 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 	<title>Tempo Sobra</title>
 </head>
 
 <body>
 	<h1>Tempo Sobra</h1>
-	<button onclick="data('N')">Natal</button>
-	<button onclick="data('H')">Halloween</button>
 
-	<script>
-		function data(d) {
-			localStorage.setItem("dia", d);
-			window.location = "./tempo.html";
-		}
-	</script>
+	<table>
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Data</th>
+				<th>Dias</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>Halloween</td>
+				<td>31 / 10</td>
+				<td id="Halloween">Ds</td>
+			</tr>
+
+			<tr>
+				<td>Natal</td>
+				<td>25 / 12</td>
+				<td id="Natal">Ds</td>
+			</tr>
+
+			<tr>
+				<td>Ano Novo</td>
+				<td>31 / 12</td>
+				<td id="AnoNovo">Ds</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script src="./script.js"></script>
 </body>
 
 </html>
