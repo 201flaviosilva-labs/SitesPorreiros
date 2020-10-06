@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tempo Sobra</title>
+</head>
+
+<body>
+	<h1>Tempo Sobra</h1>
+	<button onclick="data('N')">Natal</button>
+	<button onclick="data('H')">Halloween</button>
+
+	<script>
+		function data(d) {
+			localStorage.setItem("dia", d);
+			window.location = "./tempo.html";
+		}
+	</script>
+</body>
+
+</html>
