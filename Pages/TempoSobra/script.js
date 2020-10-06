@@ -13,7 +13,6 @@ function calcular(dia, mes) {
 	const xmas = new Date(`${mes} ${dia} ${today.getFullYear()}`);
 	if (today > xmas) xmas.setYear(today.getFullYear() + 1);
 
-	console.log(xmas);
 	const timeLeft = (xmas.getTime() - today.getTime());
 	return Math.floor(timeLeft / msPerDay);
 }
