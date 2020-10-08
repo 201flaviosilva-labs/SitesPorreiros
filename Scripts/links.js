@@ -52,11 +52,12 @@ export const links = [ // Paginas
   "./Jogos/SpaceInvaders2/index.html",
 ]).concat([ // Externos
   "https://201flaviosilva.github.io/",
+  "https://201flaviosilva.github.io/TicTacToe/",
   "http://carteiraonline.epizy.com/",
   "https://phasergames.netlify.app/",
   "https://sitesporreiros.netlify.app/",
   "https://vanillajavascript.netlify.app/",
   "https://gamesreact.vercel.app/",
   "https://reactcounter.vercel.app/",
-  "https://201flaviosilva.github.io/TicTacToe/"
+  "https://react-school-beryl.vercel.app/"
 ]);
