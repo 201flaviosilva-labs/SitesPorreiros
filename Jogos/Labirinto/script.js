@@ -17,11 +17,23 @@ let jogadorY = 0;
 
 let podeMexer = true;
 
-window.onload = () => defenirDificuldade();
+let jogoPossivel = false;
+
+window.onload = () => defenirDificuldade(localStorage.dificulade);
 function defenirDificuldade(valor) {
-	if (valor == "Dificil") dificulade = 0.65;
-	else if (valor == "Medio") dificulade = 0.75;
-	else dificulade = 0.9;
+	if (!podeMexer || valor != localStorage.dificulade) location.reload();
+	if (valor == "Dificil") {
+		dificulade = 0.65;
+		localStorage.dificulade = "Dificil";
+	}
+	else if (valor == "Medio") {
+		dificulade = 0.75;
+		localStorage.dificulade = "Medio";
+	}
+	else {
+		dificulade = 0.9;
+		localStorage.dificulade = "";
+	}
 
 	for (let x = 0; x <= maxX; x++) {
 		map[x] = [];
@@ -29,7 +41,17 @@ function defenirDificuldade(valor) {
 			map[x][y] = Math.random() > dificulade ? 0 : 1;
 		}
 	}
+	map[0][0] = 1;
 	map[maxX][maxY] = 2;
+	floodFill(0, 0);
+
+	for (let x = 0; x <= maxX; x++) {
+		for (let y = 0; y <= maxY; y++) {
+			if (map[x][y] == 3) map[x][y] = 1;
+		}
+	}
+
+	if (!jogoPossivel) location.reload();
 
 	podeMexer = true;
 	jogadorX = 0;
@@ -38,6 +60,28 @@ function defenirDificuldade(valor) {
 	desenhar();
 }
 
+function floodFill(x, y) {
+	if (x < 0 || x > maxX ||
+		y < 0 || y > maxY ||
+		map[x][y] == 3 ||
+		map[x][y] == 0) return;
+
+	if (map[x][y] == 2) {
+		jogoPossivel = true;
+		return;
+	}
+	map[x][y] = 3;
+
+	floodFill(x + 1, y);
+	floodFill(x - 1, y);
+	floodFill(x, y + 1);
+	floodFill(x, y - 1);
+}
+
+
+
+
+// --------------------------------------------------------
 document.addEventListener("keydown", (e) => { if (podeMexer) moverJogador(e) });
 function moverJogador(e) {
 	const keyCode = e.keyCode;
@@ -72,6 +116,7 @@ function desenhar() {
 			if (map[x][y] == 0) ctx.fillStyle = "red"; // Parede
 			if (map[x][y] == 1) ctx.fillStyle = "blue"; // Campo
 			if (map[x][y] == 2) ctx.fillStyle = "green"; // Comida
+			if (map[x][y] == 3) ctx.fillStyle = "pink"; // AI Caminho
 			if (x * tilleSize == jogadorX && y * tilleSize == jogadorY) ctx.fillStyle = "yellow"; // Jogador
 			ctx.fillRect(x * tilleSize, y * tilleSize, tilleSize, tilleSize);
 		}

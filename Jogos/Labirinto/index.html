@@ -27,6 +27,10 @@
 			box-shadow: 0 0 20px red;
 		}
 
+		div button {
+			cursor: pointer;
+		}
+
 		div button#btnFacil {
 			background-color: green
 		}
@@ -45,7 +49,7 @@
 	<h2><span id="Tempo">00:00</span> ms</h2>
 	<canvas id="Canvas" width="500px" height="500px"></canvas>
 	<div>
-		<button id="btnFacil" onclick="defenirDificuldade('Facil')">Facil</button>
+		<button id="btnFacil" onclick="defenirDificuldade('')">Facil</button>
 		<button id="btnMedio" onclick="defenirDificuldade('Medio')">Médio</button>
 		<button id="btnDificil" onclick="defenirDificuldade('Dificil')">Dificil</button>
 	</div>
