@@ -5,7 +5,7 @@ const canvasHeight = window.innerHeight;
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
 
-function novoNumero(max) { return parseInt(Math.random() * max); }
+function novoNumero(max = 1) { return parseInt(Math.random() * max); }
 class Bola {
 	constructor() {
 		this.x = parseInt(canvasWidth / 2);
@@ -37,10 +37,18 @@ class Bola {
 }
 
 const bolas = [];
-const numBolas = novoNumero(100);
+let numBolas;
+
+const probBolas = Math.random();
+if (probBolas < 0.25) numBolas = novoNumero(10);
+else if (probBolas < 0.5) numBolas = novoNumero(100);
+else if (probBolas < 0.75) numBolas = novoNumero(1000);
+else numBolas = novoNumero(10000);
+
 for (let i = 0; i < numBolas; i++) bolas[i] = new Bola();
 
+const limparTela = Math.random() > 0.5 ? true : false;
 setInterval(() => {
-	ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+	if (limparTela) ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 	for (let i = 0; i < bolas.length; i++) bolas[i].moverBola();
 }, 1000 / 30);
