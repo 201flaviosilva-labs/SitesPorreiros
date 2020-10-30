@@ -12,6 +12,7 @@ header h1 {
 }
 
 header h1:hover {
+  transform: scale(1.2) translate(5px, 5px);
   box-shadow: 5px 5px white;
 }
 
@@ -36,12 +37,8 @@ main a {
 }
 
 main a:hover {
-  box-shadow: 2px 4px whitesmoke,
-    0 0 30px crimson,
-    30px 0 10px khaki,
-    0 30px 10px hotpink,
-    0px -30px 10px navy,
-    -30px 0 10px rebeccapurple;
+  box-shadow: 2px 4px whitesmoke, 0 0 30px crimson, 30px 0 10px khaki,
+    0 30px 10px hotpink, 0px -30px 10px navy, -30px 0 10px rebeccapurple;
 }
 
 footer a {

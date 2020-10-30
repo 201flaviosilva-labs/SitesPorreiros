@@ -21,8 +21,14 @@ main ul li {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: yellow;
+  font-weight: 900;
+  font-size: 20px;
+  text-shadow: -5px -5px firebrick;
   background-color: blue;
   border: 6px solid salmon;
+  font-style: oblique;
+  text-transform: uppercase;
   border-radius: 4px;
 }
 
