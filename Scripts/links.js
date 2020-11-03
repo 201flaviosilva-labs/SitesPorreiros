@@ -37,20 +37,7 @@ export const links = [ // Paginas
   "./Pages/Visitas/index.html",
   "./Pages/Xadrez/index.html",
   "./Pages/Youtube/index.html",
-].concat([ // Jogos
-  "./Jogos/AdivinhaNumero/index.html",
-  // "./Jogos/ClickGame/index.html",
-  // "./Jogos/EvolucaoHistorica/index.html",
-  "./Jogos/Labirinto/index.html",
-  "./Jogos/MundoAberto/index.html",
-  "./Jogos/PedraPapelTesoura/index.html",
-  "./Jogos/Pong/index.html",
-  "./Jogos/Quiz/index.html",
-  "./Jogos/Rastro/index.html",
-  "./Jogos/Snake/index.html",
-  "./Jogos/SpaceInvaders/index.html",
-  "./Jogos/SpaceInvaders2/index.html",
-]).concat([ // Externos
+].concat([ // Externos
   "https://201flaviosilva.github.io/",
   "https://201flaviosilva.github.io/TicTacToe/",
   "http://carteiraonline.epizy.com/",
