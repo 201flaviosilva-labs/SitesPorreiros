@@ -1,0 +1,66 @@
+:root {
+  cursor: crosshair;
+  --cursorX: 50vw;
+  --cursorY: 50vh;
+}
+
+:root:before {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 10vmax at var(--cursorX) var(--cursorY),
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 80%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+ul li {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+a {
+  outline: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+button,
+a,
+label {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+canvas {
+  background: rgba(0, 0, 0, 0);
+}

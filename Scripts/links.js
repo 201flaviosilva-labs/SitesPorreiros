@@ -19,6 +19,7 @@ export const links = [ // Paginas
   "./Pages/Iluminacao/index.html",
   "./Pages/Linguagem/index.html",
   "./Pages/Loading/index.html",
+  "./Pages/Luz/index.html",
   "./Pages/Ninica/index.html",
   // "./Pages/OQueFazer/index.html",
   "./Pages/PalavraMagica/index.html",
