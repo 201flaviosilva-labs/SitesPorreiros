@@ -33,6 +33,7 @@ export const links = [ // Paginas
   "./Pages/Skills/index.html",
   "./Pages/Sozinho/index.html",
   "./Pages/SVGCoracao/index.html",
+  "./Pages/tagFixes/index.html",
   "./Pages/Tarefas/index.html",
   "./Pages/Tempo/index.html",
   "./Pages/TempoSobra/index.html",
