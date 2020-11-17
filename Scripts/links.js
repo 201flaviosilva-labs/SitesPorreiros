@@ -12,7 +12,6 @@ export const links = [ // Paginas
   "./Pages/DadosUser/index.html",
   "./Pages/DancaQuadrado/index.html",
   "./Pages/DescobrirPP/index.html",
-  // "./Pages/DiasImportantes/index.html",
   "./Pages/EventosRato/index.html",
   // "./Pages/FontInfo/index.html",
   "./Pages/FormNetlify/index.html",
