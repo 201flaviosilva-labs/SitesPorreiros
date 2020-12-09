@@ -2,12 +2,10 @@ export const links = [ // Paginas
   "./Pages/AnimacaoBola/index.html",
   "./Pages/AnimacaoDiv/index.html",
   // "./Pages/BatataMan/index.html",
-  "./Pages/BolasVoadoras/index.html",
   "./Pages/BoxStyle/index.html",
   "./Pages/BTNs/index.html",
   "./Pages/Calculadora/index.html",
   "./Pages/ChuvaBolas/index.html",
-  "./Pages/Cores/index.html",
   "./Pages/Covide19/index.html",
   "./Pages/DadosUser/index.html",
   "./Pages/DancaQuadrado/index.html",
@@ -19,12 +17,10 @@ export const links = [ // Paginas
   "./Pages/Linguagem/index.html",
   "./Pages/Loading/index.html",
   "./Pages/Luz/index.html",
-  "./Pages/MundoAberto/index.html",
   "./Pages/Ninica/index.html",
   // "./Pages/OQueFazer/index.html",
   "./Pages/PalavraMagica/index.html",
   // "./Pages/Publicidade/index.html",
-  "./Pages/QuadradosColoridos/index.html",
   "./Pages/Rastro/index.html",
   "./Pages/SegueRato/index.html",
   "./Pages/SegundoContador/index.html",
@@ -38,5 +34,7 @@ export const links = [ // Paginas
   "./Pages/TempoSobra/index.html",
   "./Pages/Visitas/index.html",
   "./Pages/Xadrez/index.html",
-  "./Pages/Youtube/index.html",
-];
+].concat(
+  [
+    "http://joguinhosweb.netlify.com"
+  ]);

@@ -21,15 +21,24 @@ main ul li {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: yellow;
   font-weight: 900;
   font-size: 20px;
-  text-shadow: -5px -5px firebrick;
-  background-color: blue;
-  border: 6px solid salmon;
+  background-color: black;
+  border: 1px solid firebrick;
   font-style: oblique;
   text-transform: uppercase;
   border-radius: 4px;
+}
+
+main ul li a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-shadow: 0 0 4px white;
+  transition: 0.5s;
+}
+main ul li a:hover {
+  transform: scale(1.5);
 }
 
 main ul li a {
