@@ -3,9 +3,6 @@
  
  [SitesPorreiros](https://sitesporreiros.netlify.app/);
 
- - ## BTNs 
-
-   [Olha um Botão](https://sitesporreiros.netlify.app/pages/btns/);
 
  - ## Chuva De Bolas
 
@@ -21,7 +18,7 @@
 
  - ## Ninica
 
-    O site de um DogMeat :dog: :dog2: :hotdog:
+    O site de uma DogMeat :hotdog:
 
  - ## Semáforo
 

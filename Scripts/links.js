@@ -39,13 +39,4 @@ export const links = [ // Paginas
   "./Pages/Visitas/index.html",
   "./Pages/Xadrez/index.html",
   "./Pages/Youtube/index.html",
-].concat([ // Externos
-  "https://201flaviosilva.github.io/",
-  "https://201flaviosilva.github.io/TicTacToe/",
-  "http://carteiraonline.epizy.com/",
-  "https://sitesporreiros.netlify.app/",
-  "https://vanillajavascript.netlify.app/",
-  "https://gamesreact.vercel.app/",
-  "https://reactcounter.vercel.app/",
-  "https://react-school-beryl.vercel.app/"
-]);
+];
