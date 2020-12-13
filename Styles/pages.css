@@ -10,10 +10,10 @@ header a h1 {
 main ul {
   padding: 4px;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, 300px);
   grid-gap: 4px 4px;
+  justify-content: center;
   border-radius: 10px;
-  background-color: whitesmoke;
 }
 
 main ul li {
