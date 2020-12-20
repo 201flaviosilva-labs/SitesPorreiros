@@ -4,9 +4,8 @@ const msPerDay = 24 * 60 * 60 * 1000; // 86 400 000
 setInterval(() => {
 	document.getElementById("Natal").innerHTML = calcular(25, month[11]);
 	document.getElementById("Halloween").innerHTML = calcular(31, month[9]);
-	document.getElementById("AnoNovo").innerHTML = calcular(31, month[11]);
+	document.getElementById("AnoNovo").innerHTML = calcular(1, month[0]);
 }, 1000);
-
 
 function calcular(dia, mes) {
 	const today = new Date();
