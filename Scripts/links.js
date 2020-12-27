@@ -31,7 +31,7 @@ export const links = [ // Paginas
   "./Pages/Tarefas/index.html",
   "./Pages/Tempo/index.html",
   "./Pages/TempoSobra/index.html",
-  "./Pages/Visitas/index.html",
+  // "./Pages/Visitas/index.html",
   "./Pages/Xadrez/index.html",
 ].concat(
   [
