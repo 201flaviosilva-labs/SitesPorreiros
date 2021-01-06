@@ -3,7 +3,6 @@ export const links = [ // Paginas
   "./Pages/AnimacaoDiv/index.html",
   // "./Pages/BatataMan/index.html",
   "./Pages/BoxStyle/index.html",
-  "./Pages/BTNs/index.html",
   "./Pages/Calculadora/index.html",
   "./Pages/ChuvaBolas/index.html",
   "./Pages/Covide19/index.html",
