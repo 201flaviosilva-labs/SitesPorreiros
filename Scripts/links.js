@@ -28,6 +28,7 @@ export const links = [ // Paginas
   "./Pages/Semaforo/",
   "./Pages/Skills/",
   "./Pages/Sozinho/",
+  "./Pages/StarWars/",
   "./Pages/SVGCoracao/",
   "./Pages/tagFixes/",
   "./Pages/Tarefas/",

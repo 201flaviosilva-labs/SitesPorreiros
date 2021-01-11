@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .deslize {
+    height: 50em;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin: 0 0 0 -400px;
+    top: auto;
+    color: #ffff66;
+    font-size: 40px;
+    transform-origin: center bottom;
+    transform: perspective(300px) rotateX(25deg);
+    div {
+      position: fixed;
+      animation-duration: 20s;
+      animation-name: deslize;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+@keyframes deslize {
+  0% {
+    top: 100%;
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}
