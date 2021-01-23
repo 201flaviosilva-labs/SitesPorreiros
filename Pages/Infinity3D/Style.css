@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+html body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 50px;
+  background: linear-gradient(90deg, #002945 0%, #350038 50%, #072147 100%);
+}
+
+html body div.frame {
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  border-radius: 50px;
+  filter: brightness(1.5) contrast(3);
+  border: 5px solid #087be6;
+  box-shadow: 0px 0px 20px #00ccff, inset 0px 0px 20px #00ccff, 0px 0px 60px #ff00c8, inset 0px 0px 60px #ff00c8;
+  animation: breathing 3s ease-out infinite;
+}
+
+html body div.frame:nth-child(1) {
+  transform: rotate(40deg) translateY(50px) translateZ(-10px);
+  opacity: 1;
+  animation-delay: 0.2s;
+}
+
+html body div.frame:nth-child(2) {
+  transform: rotate(40deg) translateY(100px) translateZ(-20px);
+  opacity: 1;
+  animation-delay: 0.4s;
+}
+
+html body div.frame:nth-child(3) {
+  transform: rotate(40deg) translateY(150px) translateZ(-30px);
+  opacity: 1;
+  animation-delay: 0.6s;
+}
+
+html body div.frame:nth-child(4) {
+  transform: rotate(40deg) translateY(200px) translateZ(-40px);
+  opacity: 1;
+  animation-delay: 0.8s;
+}
+
+html body div.frame:nth-child(5) {
+  transform: rotate(40deg) translateY(250px) translateZ(-50px);
+  opacity: 1;
+  animation-delay: 1s;
+}
+
+html body div.frame:nth-child(6) {
+  transform: rotate(40deg) translateY(300px) translateZ(-60px);
+  opacity: 1;
+  animation-delay: 1.2s;
+}
+
+html body div.frame:nth-child(7) {
+  transform: rotate(40deg) translateY(350px) translateZ(-70px);
+  opacity: 1;
+  animation-delay: 1.4s;
+}
+
+html body div.frame:nth-child(8) {
+  transform: rotate(40deg) translateY(400px) translateZ(-80px);
+  opacity: 1;
+  animation-delay: 1.6s;
+}
+
+html body div.frame:nth-child(9) {
+  transform: rotate(40deg) translateY(450px) translateZ(-90px);
+  opacity: 1;
+  animation-delay: 1.8s;
+}
+
+html body div.frame:nth-child(10) {
+  transform: rotate(40deg) translateY(500px) translateZ(-100px);
+  opacity: 1;
+  animation-delay: 2s;
+}
+
+@keyframes breathing {
+  0% {
+    filter: brightness(2) contrast(3);
+  }
+  50% {
+    filter: brightness(1) contrast(2);
+  }
+  100% {
+    filter: brightness(2) contrast(3);
+  }
+}
+
+@keyframes zooming {
+  0% {
+    perspective: 45px;
+  }
+  50% {
+    perspective: 50px;
+  }
+  100% {
+    perspective: 45px;
+  }
+}

@@ -1,0 +1,83 @@
+$numElements: 10;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 50px;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 41, 69, 1) 0%,
+      rgb(53, 0, 56) 50%,
+      rgba(7, 33, 71, 1) 100%
+    );
+    // animation: zooming 10s ease-in-out infinite;
+
+    div {
+      &.frame {
+        width: 900px;
+        height: 900px;
+        position: absolute;
+        border-radius: 50px;
+        filter: brightness(1.5) contrast(3);
+        border: 5px solid #087be6;
+
+        box-shadow: 0px 0px 20px #00ccff, inset 0px 0px 20px #00ccff,
+          0px 0px 60px #ff00c8, inset 0px 0px 60px #ff00c8;
+
+        animation: breathing 3s ease-out infinite;
+
+        @for $i from 1 through $numElements {
+          &:nth-child(#{$i}) {
+            $translateY: #{$i * 50}px;
+            $translateZ: -#{$i * 10}px;
+            $delay: #{$i * 0.2}s;
+
+            transform: rotate(40deg)
+              translateY($translateY)
+              translateZ($translateZ);
+            opacity: 1;
+            animation-delay: $delay;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Animation
+@keyframes breathing {
+  0% {
+    filter: brightness(2) contrast(3);
+  }
+  50% {
+    filter: brightness(1) contrast(2);
+  }
+  100% {
+    filter: brightness(2) contrast(3);
+  }
+}
+
+@keyframes zooming {
+  0% {
+    perspective: 45px;
+  }
+  50% {
+    perspective: 50px;
+  }
+  100% {
+    perspective: 45px;
+  }
+}
