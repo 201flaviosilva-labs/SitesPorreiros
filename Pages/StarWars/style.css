@@ -1,9 +1,14 @@
+@font-face {
+  font-family: StarJedi;
+  src: url(./Starjout.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
-  font-family: "Courier New", Courier, monospace;
+  font-family: StarJedi, "Courier New", Courier, monospace;
 }
 
 html,
@@ -17,25 +22,32 @@ body {
   justify-content: center;
 }
 
+html h1,
+body h1 {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  text-align: center;
+}
+
 html .deslize,
 body .deslize {
-  height: 50em;
+  height: 60em;
   width: 50%;
   position: fixed;
   bottom: 0;
   left: 50%;
-  margin: 0 0 0 -400px;
   top: auto;
   color: #ffff66;
   font-size: 40px;
   transform-origin: center bottom;
-  transform: perspective(300px) rotateX(25deg);
+  transform: perspective(800px) rotateX(25deg) translateX(-50%);
 }
 
 html .deslize div,
 body .deslize div {
   position: fixed;
-  animation-duration: 20s;
+  animation-duration: 40s;
   animation-name: deslize;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -46,7 +58,7 @@ body .deslize div {
     top: 100%;
     opacity: 1;
   }
-  80% {
+  90% {
     opacity: 1;
   }
   100% {
