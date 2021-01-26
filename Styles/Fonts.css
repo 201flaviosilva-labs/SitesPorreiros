@@ -1,0 +1,17 @@
+/* 
+  <link rel="stylesheet" href="../../Styles/Fonts.css">
+
+  *{
+    font-family: PressStart2P, "Courier New", Courier, monospace;
+  }
+*/
+
+@font-face {
+  font-family: "PressStart2P";
+  src: url("../Assets/Fonts/PressStart2P/PressStart2P.ttf");
+}
+
+@font-face {
+  font-family: "StarJout";
+  src: url("../Assets/Fonts/StarJout/StarJout.ttf");
+}
