@@ -13,7 +13,6 @@ export const links = [ // Paginas
   "./Pages/DancaQuadrado/",
   "./Pages/DescobrirPP/",
   "./Pages/EventosRato/",
-  // "./Pages/FontInfo/",
   "./Pages/FormNetlify/",
   "./Pages/Iluminacao/",
   "./Pages/Infinity3D/",
@@ -22,7 +21,6 @@ export const links = [ // Paginas
   "./Pages/Luz/",
   "./Pages/MeiaGaspea/",
   "./Pages/Ninica/",
-  // "./Pages/OQueFazer/",
   "./Pages/PalavraMagica/",
   // "./Pages/Publicidade/",
   "./Pages/SegueRato/",
@@ -38,7 +36,4 @@ export const links = [ // Paginas
   "./Pages/TempoSobra/",
   // "./Pages/Visitas/",
   "./Pages/Xadrez/",
-].concat(
-  [
-    // "http://joguinhosweb.netlify.com"
-  ]);
+];

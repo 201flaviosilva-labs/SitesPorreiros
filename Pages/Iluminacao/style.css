@@ -27,17 +27,16 @@ h1 {
 
 img {
   width: 100%;
-  height: 100%;
+  height: 50%;
 }
 
 button {
-  width: 100%;
-  margin: 0 10px 10px 10px;
+  width: 90%;
   padding: 10px 0;
   outline: none;
   font-size: 20px;
   font-weight: 900;
-  border: 2px solid black;
+  border: 2px dashed white;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -45,10 +44,11 @@ button {
 .btnOn {
   background-color: yellow;
   color: black;
+  border: 2px solid black;
 }
 
 .btnOff {
+  border: 2px dashed white;
   background-color: black;
   color: white;
-  border: 1px solid white;
 }
