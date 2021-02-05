@@ -1,0 +1,64 @@
+$StartColor: #f00;
+$MiddleColor: #0f0;
+$EndColor: #00f;
+$Color: #00f;
+
+@mixin shadowEffect {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px $StartColor,
+    0 0 40px $StartColor, 0 0 50px $StartColor, 0 0 60px $StartColor,
+    0 0 70px $StartColor;
+
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px $StartColor,
+    0 0 40px $StartColor, 0 0 50px $StartColor, 0 0 60px $StartColor,
+    inset 0 0 10px #fff, inset 0 0 20px #fff, inset 0 0 30px $StartColor,
+    inset 0 0 40px $StartColor, inset 0 0 50px $StartColor,
+    inset 0 0 60px $StartColor;
+}
+
+* {
+  font-family: Roboto, "Courier New", Courier, monospace;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  padding: 20px 10px;
+  width: 300px;
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 10px;
+
+  @include shadowEffect;
+
+  animation: shadowAnimation 5s ease-in-out infinite alternate;
+}
+
+@keyframes shadowAnimation {
+  0% {
+    $Color: $StartColor;
+
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px $Color, 0 0 40px $Color,
+      0 0 50px $Color, 0 0 60px $Color, 0 0 70px $Color;
+  }
+
+  50% {
+    $Color: $MiddleColor;
+
+    text-shadow: 0 0 20px #fff, 0 0 30px $Color, 0 0 40px $Color,
+      0 0 50px $Color, 0 0 60px $Color;
+  }
+
+  100% {
+    $Color: $EndColor;
+
+    text-shadow: 0 0 20px #fff, 0 0 30px $Color, 0 0 40px $Color,
+      0 0 50px $Color, 0 0 60px $Color, 0 0 70px $Color;
+  }
+}

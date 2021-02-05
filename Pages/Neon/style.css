@@ -1,0 +1,35 @@
+* {
+  font-family: Roboto, "Courier New", Courier, monospace;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  padding: 20px 10px;
+  width: 300px;
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00, 0 0 70px #f00;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00, inset 0 0 10px #fff, inset 0 0 20px #fff, inset 0 0 30px #f00, inset 0 0 40px #f00, inset 0 0 50px #f00, inset 0 0 60px #f00;
+  animation: shadowAnimation 5s ease-in-out infinite alternate;
+}
+
+@keyframes shadowAnimation {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00, 0 0 70px #f00;
+  }
+  50% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #0f0, 0 0 40px #0f0, 0 0 50px #0f0, 0 0 60px #0f0;
+  }
+  100% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 60px #00f, 0 0 70px #00f;
+  }
+}
