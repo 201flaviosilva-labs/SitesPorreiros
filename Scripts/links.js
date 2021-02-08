@@ -1,4 +1,5 @@
 export const links = [ // Paginas
+  "./Pages/AEscrever/",
   "./Pages/AmazingSites/",
   "./Pages/AnimacaoBola/",
   "./Pages/AnimacaoDiv/",
