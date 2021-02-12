@@ -2,12 +2,12 @@
   <link rel="stylesheet" href="../../Styles/Fonts.css">
 
   *{
-    font-family: PressStart2P, "Courier New", Courier, monospace;
+    font-family: Press Start 2P, "Courier New", Courier, monospace;
   }
 */
 
 @font-face {
-  font-family: "PressStart2P";
+  font-family: "Press Start 2P";
   src: url("../Assets/Fonts/PressStart2P/PressStart2P.ttf");
 }
 
