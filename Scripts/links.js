@@ -1,4 +1,4 @@
-export const links = [ // Vanilla
+const vanilla = [
   "/Pages/AEscrever/",
   "/Pages/AmazingSites/",
   "/Pages/AnimacaoBola/",
@@ -39,9 +39,14 @@ export const links = [ // Vanilla
   "/Pages/TempoSobra/",
   // "/Pages/Visitas/",
   "/Pages/Xadrez/",
-].concat( // Frameworks / Libs
-  [
-    "/Pages/_frameworks/Push/",
-    "/Pages/_frameworks/TiltEffect/",
-  ]
-);
+];
+
+const libs = [
+  "/Frameworks/Push/",
+  "/Frameworks/SweetAlert/",
+  "/Frameworks/TiltEffect/",
+];
+
+const links = [].concat(vanilla, libs);
+
+export { links, vanilla, libs };

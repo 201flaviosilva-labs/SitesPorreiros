@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../Styles/reset.css">
+	<link rel="stylesheet" href="./style.css">
+	<title>Sweet Alert</title>
+</head>
+
+<body>
+
+	<button onClick="alerta1()">Alerta 1</button>
+	<button onClick="alerta2()">Alerta 2</button>
+	<button onClick="alerta3()">Alerta 3</button>
+	<button onClick="alerta4()">Alerta 4</button>
+	<button onClick="alerta5()">Alerta 5</button>
+
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+	<script>
+		function alerta1() {
+			swal("Está ai alguem?");
+		}
+
+		function alerta2() {
+			swal({
+				title: "Errou",
+				text: "Tempo acabou!",
+				icon: "error",
+				button: "Ok",
+			});
+		}
+
+		function alerta3() {
+			swal({
+				icon: "success",
+				title: "success",
+			}).then(() => {
+				swal({
+					icon: "warning",
+					title: "warning",
+				}).then(() => {
+					swal({
+						icon: "error",
+						title: "error",
+					}).then(() => {
+						swal({
+							icon: "info",
+							title: "info",
+						}); // Info
+					});// Error
+				}); // Warning
+			}); // Success
+		}
+
+		function alerta4() {
+			swal({
+				content: {
+					element: "input",
+					attributes: {
+						placeholder: "Escreve tudo",
+						type: "password",
+					},
+				},
+				buttons: {
+					confirm: "Confirmar",
+					cancel: true,
+					defeat: true,
+					siga: {
+						value: "ok",
+						text: "OK",
+						visible: true,
+						className: "",
+						closeModal: false,
+					},
+				},
+			});
+		}
+
+		function alerta5() {
+			swal("Escreve alguma coisa:", {
+				content: "input",
+			}).then(value => {
+				swal("Só isto?", `${value}`, "success");
+			});
+
+		}
+
+	</script>
+</body>
+
+</html>

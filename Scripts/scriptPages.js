@@ -6,8 +6,8 @@ links.map(l => {
   const li = document.createElement("li");
   const a = document.createElement("a");
   a.innerHTML = l
-    .replace("/Pages/", "")
-    .replace("_frameworks", "")
+    .replace("Pages/", "")
+    .replace("Frameworks/", "")
     .replace("/", "")
     .replace("/", "");
   a.href = l;
