@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../../Styles/Fonts.css">
+	<link rel="stylesheet" href="../../../Styles/reset.css">
+	<link rel="stylesheet" href="./style.css">
+	<title>Push</title>
+</head>
+
+<body>
+	<div>
+		<button id="simpleNotification">Notificação Simples</button>
+		<button id="configNotification">Notificação Complexa</button>
+		<button id="clearNotification">Limpar</button>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js"
+		integrity="sha512-DjIQO7OxE8rKQrBLpVCk60Zu0mcFfNx2nVduB96yk5HS/poYZAkYu5fxpwXj3iet91Ezqq2TNN6cJh9Y5NtfWg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script>
+		document.getElementById("simpleNotification").addEventListener("click", () => {
+			Push.create("I'm your father!");
+		});
+
+
+		document.getElementById("configNotification").addEventListener("click", () => {
+			const config = {
+				body: "I have a bad feeling about this.",
+				timeout: 5000,
+				onClick: function () {
+					window.focus();
+					this.close();
+				},
+			};
+
+			Push.create("Star Wars", config);
+		});
+
+		document.getElementById("clearNotification").addEventListener("click", () => { Push.clear(); });
+
+	</script>
+</body>
+
+</html>

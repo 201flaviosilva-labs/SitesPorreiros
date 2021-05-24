@@ -2,25 +2,15 @@ import { links } from "./links.js";
 
 const ulTag = document.getElementById("ul");
 
-links.map((valor) => {
+links.map(l => {
   const li = document.createElement("li");
   const a = document.createElement("a");
-  a.innerHTML = valor
-    .replace("https://", "")
-    .replace("http://", "")
-    .replace("./Pages/", "")
-    .replace("./Jogos/", "")
-    .replace("/index.html", "")
-    .replace("201flaviosilva", "")
-    .replace(".github.io", "")
-    .replace(".netlify.app", "")
-    .replace(".netlify.com", "")
-    .replace(".vercel.app", "")
-    .replace(".vercel.com", "")
-    .replace(".epizy.com", "")
+  a.innerHTML = l
+    .replace("/Pages/", "")
+    .replace("_frameworks", "")
     .replace("/", "")
     .replace("/", "");
-  a.href = valor;
+  a.href = l;
   li.appendChild(a);
   ulTag.appendChild(li);
 });
