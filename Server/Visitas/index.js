@@ -10,9 +10,12 @@ express.get("/", (req, res) => {
 	});
 });
 
-storage.init().then(() => storage.getItem("counter")).then((value) => {
-	if (value > 0) counter = value;
-	else counter = 0;
+storage.init()
+	.then(() => storage.getItem("counter")).then((value) => {
+		if (value > 0) counter = value;
+		else counter = 0;
 
-	// express.listen(5000, "0.0.0.0"); // Dev
-});
+		express.listen(5000, "0.0.0.0"); // Dev
+	});
+
+if (!process.env.PORT) console.log("http://localhost:5000/");
