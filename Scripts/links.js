@@ -42,6 +42,7 @@ const vanilla = [
 ];
 
 const libs = [
+  "/Frameworks/Highlightjs/",
   "/Frameworks/Push/",
   "/Frameworks/SweetAlert/",
   "/Frameworks/TiltEffect/",
