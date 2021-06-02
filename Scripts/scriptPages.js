@@ -10,7 +10,7 @@ links.map(l => {
     .replace("Frameworks/", "")
     .replace("/", "")
     .replace("/", "");
-  a.href = l;
+  a.href = l + "index.html";
   li.appendChild(a);
   ulTag.appendChild(li);
 });
