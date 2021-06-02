@@ -42,6 +42,7 @@ const vanilla = [
 ];
 
 const libs = [
+  "/Frameworks/Detect/",
   "/Frameworks/Highlightjs/",
   "/Frameworks/Platform/",
   "/Frameworks/Push/",
