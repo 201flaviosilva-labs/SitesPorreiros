@@ -15,6 +15,7 @@
 - Sol;
 - Tambor;
 - Tosco;
+- Adamastor;
 
 ## Femininos
 
