@@ -23,6 +23,7 @@ const vanilla = [
   "Pages/Loading/",
   "Pages/Luz/",
   "Pages/MeiaGaspea/",
+  "Pages/Morfismo/",
   "Pages/Neon/",
   "Pages/Ninica/",
   "Pages/PalavraMagica/",

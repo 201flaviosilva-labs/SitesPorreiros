@@ -1,0 +1,91 @@
+/* https://glassmorphism.com/ */
+/* https://neumorphism.com/ */
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+div.glassmorphism-container {
+  position: relative;
+  top: 100px;
+  left: 100px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+div.frame {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  animation: rotatingAnimation 10s linear infinite;
+}
+
+div.glassmorphism-container div {
+  background: rgba(249, 0, 0, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+div.glassmorphism1 {
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+}
+
+div.glassmorphism2 {
+  top: 150px;
+  left: 150px;
+}
+
+div.glassmorphism3 {
+  top: 50px;
+  left: 150px;
+}
+
+div.glassmorphism4 {
+  top: 150px;
+  left: 50px;
+}
+
+div.glassmorphism5 {
+  top: 50px;
+  left: 50px;
+}
+
+div.neomorphism-container {
+  position: fixed;
+  top: 500px;
+  left: 100px;
+  width: 300px;
+  height: 300px;
+
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background: #0000ff;
+  -webkit-box-shadow: 12px 12px 24px #0000d9, -12px -12px 24px #0000ff;
+  box-shadow: 12px 12px 24px #0000d9, -12px -12px 24px #0000ff;
+
+  animation: rotatingAnimation 10s linear infinite;
+}
+
+@keyframes rotatingAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

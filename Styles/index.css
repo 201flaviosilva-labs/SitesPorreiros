@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
 
-body.index {
+body.index div#container {
   display: flex;
   flex-direction: column;
   align-items: center;
