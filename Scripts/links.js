@@ -52,6 +52,7 @@ const libs = [
   "Frameworks/Push/",
   "Frameworks/SweetAlert/",
   "Frameworks/TiltEffect/",
+  "Frameworks/UUID/",
 ];
 
 const links = [].concat(vanilla, libs);
