@@ -1,4 +1,8 @@
 export const randomNumber = (min = 0, max = 10) => Math.floor(Math.random() * (max - min + 1) + min);
+
+export const randomRGBColor = () => `rgb(${randomNumber(0, 255)}, ${randomNumber(0, 255)}, ${randomNumber(0, 255)})`;
+export const randomRGBAColor = () => `rgb(${randomNumber(0, 255)}, ${randomNumber(0, 255)}, ${randomNumber(0, 255)}, ${Math.random().toFixed(5)})`;
+
 export const getMinArrayObjects = (arr, prop) => {
 	let min = +Infinity, index = null;
 	arr.map(function (v, k) {

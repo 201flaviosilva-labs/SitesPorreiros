@@ -45,6 +45,7 @@ const vanilla = [
 
 const libs = [
   "Frameworks/Browser/",
+  "Frameworks/Chartjs/",
   "Frameworks/Detect/",
   "Frameworks/Fabric/",
   "Frameworks/Highlightjs/",
