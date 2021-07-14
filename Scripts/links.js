@@ -50,6 +50,7 @@ const libs = [
   "Frameworks/Fabric/",
   "Frameworks/Faker/",
   "Frameworks/Highlightjs/",
+  "Frameworks/Island/",
   "Frameworks/Platform/",
   "Frameworks/Push/",
   "Frameworks/SweetAlert/",
