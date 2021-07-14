@@ -48,6 +48,7 @@ const libs = [
   "Frameworks/Chartjs/",
   "Frameworks/Detect/",
   "Frameworks/Fabric/",
+  "Frameworks/Faker/",
   "Frameworks/Highlightjs/",
   "Frameworks/Platform/",
   "Frameworks/Push/",

@@ -1,7 +1,6 @@
 import { updateData } from "./chartUtils.js";
 import { randomNumber } from "../../Scripts/utils.js";
 
-
 window.onload = () => {
 	const canvas = document.getElementById("canvas").getContext("2d");
 
@@ -43,6 +42,10 @@ window.onload = () => {
 				labels: {
 					fontSize: 0,
 				},
+			},
+			title: {
+				display: false,
+				text: "Pedra Papel Tesoura",
 			},
 			scales: {
 				y: {
