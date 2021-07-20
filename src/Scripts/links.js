@@ -15,7 +15,6 @@ const vanilla = [
   "Pages/DescobrirPP/",
   "Pages/EventosRato/",
   // "Pages/FormNetlify/",
-  "Pages/HillClimbing/",
   "Pages/Iluminacao/",
   "Pages/Infinity3D/",
   "Pages/Letras/",
