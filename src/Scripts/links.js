@@ -27,6 +27,7 @@ const vanilla = [
   "Pages/Ninica/",
   "Pages/PalavraMagica/",
   // "Pages/Publicidade/",
+  "Pages/RepeatAlarm/",
   "Pages/SegueRato/",
   "Pages/SegundoContador/",
   "Pages/Semaforo/",
