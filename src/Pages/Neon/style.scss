@@ -16,7 +16,8 @@ $Color: #00f;
 }
 
 * {
-  font-family: Roboto, "Courier New", Courier, monospace;
+  font-family: "Hello Denver Display", Roboto, "Courier New", Courier, monospace;
+  // font-family: Roboto, "Courier New", Courier, monospace;
 }
 
 body {
@@ -27,13 +28,14 @@ body {
 }
 
 h1 {
-  padding: 20px 10px;
+  padding: 30px 30px;
   width: 300px;
   font-size: 80px;
   color: #fff;
   text-align: center;
   border: 2px solid white;
   border-radius: 10px;
+  text-transform: uppercase;
 
   @include shadowEffect;
 

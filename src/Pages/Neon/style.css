@@ -1,5 +1,5 @@
 * {
-  font-family: Roboto, "Courier New", Courier, monospace;
+  font-family: "Hello Denver Display", Roboto, "Courier New", Courier, monospace;
 }
 
 body {
@@ -10,13 +10,14 @@ body {
 }
 
 h1 {
-  padding: 20px 10px;
+  padding: 30px 30px;
   width: 300px;
   font-size: 80px;
   color: #fff;
   text-align: center;
   border: 2px solid white;
   border-radius: 10px;
+  text-transform: uppercase;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00, 0 0 70px #f00;
   box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00, inset 0 0 10px #fff, inset 0 0 20px #fff, inset 0 0 30px #f00, inset 0 0 40px #f00, inset 0 0 50px #f00, inset 0 0 60px #f00;
   animation: shadowAnimation 5s ease-in-out infinite alternate;
