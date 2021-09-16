@@ -7,6 +7,11 @@
 */
 
 @font-face {
+  font-family: "BitFont";
+  src: url("../Assets/Fonts/BitFont/BitFont.ttf");
+}
+
+@font-face {
   font-family: "Press Start 2P";
   src: url("../Assets/Fonts/PressStart2P/PressStart2P.ttf");
 }
@@ -16,12 +21,20 @@
   src: url("../Assets/Fonts/StarJout/StarJout.ttf");
 }
 
+@font-face {
+  font-family: "Hello Denver Display";
+  src: url("../Assets/Fonts/Hello\ Denver\ Display/hellodenverdisplayregular_v1.6.ttf")
+      format("ttf"),
+    url("../Assets/Fonts/Hello\ Denver\ Display/hellodenverdisplayregular_v1.6.woff")
+      format("woff");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: black;
-  font-family: "Press Start 2P", "Courier New", Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 html,
