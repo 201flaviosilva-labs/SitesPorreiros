@@ -44,6 +44,7 @@ const vanilla = [
 ];
 
 const libs = [
+  "Frameworks/AwesomeNotifications/",
   "Frameworks/Browser/",
   "Frameworks/Chartjs/",
   "Frameworks/Detect/",
