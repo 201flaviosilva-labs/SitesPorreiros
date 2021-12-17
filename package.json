@@ -2,16 +2,16 @@
   "name": "sitesporreiros",
   "version": "1.0.0",
   "description": "SitesPorreiros",
+  "homepage": "https://201flaviosilva.github.io/SitesPorreiros/",
   "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/201flaviosilva/SitesPorreiros.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "201flaviosilva",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/201flaviosilva/SitesPorreiros/issues"
-  },
-  "homepage": "https://201flaviosilva.github.io/SitesPorreiros/"
+  }
 }
